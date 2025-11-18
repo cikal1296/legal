@@ -1,0 +1,1 @@
+<img src="{{ asset('img/logoo.jpg') }}" alt="chainsaw man" class="h-20">
