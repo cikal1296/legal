@@ -413,7 +413,7 @@
     <!-- Sidebar -->
 
     <aside
-      class="fixed shadow-md top-32 pb-5 pt-5 border-gray-500 left-0 z-40 w-auto rounded-2xl max-h-[calc(100vh-4rem)]  transition-transform -translate-x-full bg-white border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+      class="fixed shadow-md top-32 border-gray-500 left-0 z-40 w-auto rounded-2xl max-h-[calc(100vh-4rem)]  transition-transform -translate-x-full bg-white border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
       aria-label="Sidenav" id="drawer-navigation">
       <div class="overflow-y-auto border-gray-300 py-5 rounded-2xl px-3 h-full bg-white dark:bg-gray-800">
         <form action="#" method="GET" class="md:hidden mb-2">
@@ -495,7 +495,7 @@
 
             </a>
           </li>
-          <li>
+          {{-- <li>
             <a href="/anjas"
               class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-700" fill="none" viewBox="0 0 24 24"
@@ -507,7 +507,7 @@
 
 
             </a>
-          </li>
+          </li> --}}
           <li>
             <a href="/jurnal"
               class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
