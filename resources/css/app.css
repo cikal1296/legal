@@ -2,3 +2,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+.icon {
+    @apply  2xl:h-7 2xl:w-7 w-6 h-6;
+   
+}
+
+
+}

@@ -1,29 +1,34 @@
-<x-utama><div class="p-6">
-    <!-- Header -->
-    <div class="flex items-center gap-2 mb-3">
-    <button 
-        class="px-3 py-1 rounded-md text-white text-sm bg-teal-500 hover:bg-teal-600"
-        onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">
-        Sub Tugas
-    </button>
+<x-utama>
+<div class="p-6">
 
-    <h2 class="text-lg font-semibold">
-        #1823702 - Jordan Yudhistira : Finansial
-    </h2>
-</div>
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-center gap-2 mb-3">
+        <button 
+            class="px-3 py-1 rounded-md text-white text-sm bg-teal-500 hover:bg-teal-600 w-fit"
+            onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">
+            Sub Tugas
+        </button>
+
+        <h2 class="text-lg font-semibold">
+            #1823702 - Jordan Yudhistira : Finansial
+        </h2>
+    </div>
 
     <!-- Filters -->
     <div class="bg-white shadow-md rounded-lg p-4 mb-6 flex flex-wrap gap-3">
-        <select class="border rounded-md px-3 pr-8 py-2 text-sm">
+        <select class="border rounded-md px-3 pr-8 py-2 text-sm w-full sm:w-auto">
             <option>Semua</option>
         </select>
-        <select class="border rounded-md px-3 pr-8 py-2 text-sm">
+
+        <select class="border rounded-md px-3 pr-8 py-2 text-sm w-full sm:w-auto">
             <option>Status</option>
         </select>
-        <select class="border rounded-md px-3 pr-8 py-2 text-sm">
+
+        <select class="border rounded-md px-3 pr-8 py-2 text-sm w-full sm:w-auto">
             <option>Prioritas</option>
         </select>
-        <input type="date" class="border rounded-md px-3 py-2 text-sm" />
+
+        <input type="date" class="border rounded-md px-3 py-2 text-sm w-full sm:w-auto" />
     </div>
 
     <!-- Card Group -->
@@ -31,14 +36,22 @@
 
         <!-- Grup 1 -->
         <div class="bg-white shadow-md rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-3">
-    <h2 class="text-lg font-semibold">#1823702 - Jordan Yudhistira : Finansial</h2>
-    <button class="px-3 py-1 rounded-md text-white text-sm bg-teal-500 hover:bg-teal-600" onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">Sub Tugas</button>
-</div>
+            
+            <div class="flex flex-col md:flex-row md:items-center gap-2 mb-3">
+                <h2 class="text-lg font-semibold flex-1">
+                    #1823702 - Jordan Yudhistira : Finansial
+                </h2>
+
+                <button 
+                    class="px-3 py-1 rounded-md text-white text-sm bg-teal-500 hover:bg-teal-600 w-fit"
+                    onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">
+                    Sub Tugas
+                </button>
+            </div>
 
             <!-- Main Tasks -->
             <div class="overflow-x-auto mb-4">
-                <table class="w-full text-sm text-left text-gray-700">
+                <table class="min-w-max w-full text-sm text-left text-gray-700">
                     <thead class="bg-gray-100 text-xs uppercase border-b">
                         <tr>
                             <th class="px-4 py-3">Tugas</th>
@@ -82,7 +95,7 @@
 
             <!-- Subtasks Table -->
             <div class="overflow-x-auto">
-                <table class="w-full text-sm text-left text-gray-700">
+                <table class="min-w-max w-full text-sm text-left text-gray-700">
                     <thead class="bg-gray-100 text-xs uppercase border-b">
                         <tr>
                             <th class="px-4 py-3">Tugas</th>
@@ -142,17 +155,26 @@
                     </tbody>
                 </table>
             </div>
+
         </div>
 
         <!-- Grup 2 -->
         <div class="bg-white shadow-md rounded-lg p-4">
-            <div class="flex items-center gap-2 mb-3">
-    <h2 class="text-lg font-semibold">#1923702 - Paudra Sanjaya : Properti</h2>
-    <button class="px-3 py-1 rounded-md text-white text-sm bg-teal-500 hover:bg-teal-600" onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">Sub Tugas</button>
-</div>
+
+            <div class="flex flex-col md:flex-row md:items-center gap-2 mb-3">
+                <h2 class="text-lg font-semibold flex-1">
+                    #1923702 - Paudra Sanjaya : Properti
+                </h2>
+
+                <button 
+                    class="px-3 py-1 rounded-md text-white text-sm bg-teal-500 hover:bg-teal-600 w-fit"
+                    onclick="this.parentElement.nextElementSibling.classList.toggle('hidden')">
+                    Sub Tugas
+                </button>
+            </div>
 
             <div class="overflow-x-auto">
-                <table class="w-full text-sm text-left text-gray-700">
+                <table class="min-w-max w-full text-sm text-left text-gray-700">
                     <thead class="bg-gray-100 text-xs uppercase border-b">
                         <tr>
                             <th class="px-4 py-3">Tugas</th>
@@ -179,10 +201,10 @@
                     </tbody>
                 </table>
             </div>
+
         </div>
+
     </div>
+
 </div>
-
-
-
 </x-utama>
