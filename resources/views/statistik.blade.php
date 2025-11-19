@@ -64,8 +64,9 @@
 
         <!-- Title + dropdown + button -->
         <div class="flex justify-between items-center">
+
           <div class="flex items-center gap-3 2xl:gap-5">
-            <h2 class="font-semibold text-gray-700">Paudra Sanjaya - #1923702</h2>
+            <h2 class="font-semibold text-gray-700">Paudra Sanjayi - #1923702</h2>
 
             <!-- dropdown arrow -->
             <button class="text-gray-600 hover:text-black">
