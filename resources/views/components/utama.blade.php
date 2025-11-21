@@ -18,11 +18,68 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+<script>
+  document.addEventListener('alpine:init', () => {
+    Alpine.store('documentModal', {
+      openForm: false,
+      openFolderForm: false
+    });
+  });
+</script>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+<body x-data="globalApp()" class="font-sans antialiased">
+<!-- Modal Tambah Dokumen -->
+<div x-data="{ openForm: false, form: { name:'', type:'', case:'', storage:'' } }">
+    
+    <!-- Tombol buka modal -->
+    <button @click="openForm = true" class="px-4 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700">
+        Tambah Dokumen
+    </button>
 
-<body class="font-sans antialiased">
+    <!-- Modal -->
+    <div x-show="openForm" 
+         x-transition 
+         class="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50"
+         style="display:none">
+
+        <div class="bg-white p-5 rounded-lg w-80">
+            <h2 class="text-lg font-semibold mb-3">Tambah Dokumen</h2>
+
+            <input x-model="form.name"     type="text" placeholder="Nama Dokumen" class="w-full border px-3 py-2 rounded mb-2">
+               <select x-model="form.type" class="w-full border px-3 py-2 rounded mb-2">
+            <option value="" disabled selected>Pilih Tipe File</option>
+            <option value="PDF">PDF</option>
+            <option value="Word">Word</option>
+            <option value="Excel">Excel</option>
+            <option value="PowerPoint">PowerPoint</option>
+            <option value="Lainnya">Lainnya</option>
+        </select>
+            <input x-model="form.case"     type="text" placeholder="Pekerjaan" class="w-full border px-3 py-2 rounded mb-2">
+            <input x-model="form.storage"  type="text" placeholder="Lokasi Penyimpanan" class="w-full border px-3 py-2 rounded mb-2">
+
+            <button @click="saveDocument" 
+                    class="px-4 py-2 bg-teal-600 text-white rounded-md w-full hover:bg-teal-700">
+                Simpan
+            </button>
+
+            <button @click="openForm = false" class="mt-2 text-gray-500 w-full">Batal</button>
+        </div>
+    </div>
+
+    <script>
+        function saveDocument() {
+            // Contoh: log data form, lo bisa ganti sesuai API
+            console.log(this.form);
+            alert('Dokumen tersimpan! (cek console)');
+            this.openForm = false;
+            // reset form
+            this.form = { name:'', type:'', case:'', storage:'' };
+        }
+    </script>
+
+
+  
 <style>
     /* Border antar hari */
     .fc-theme-standard td, 
@@ -74,8 +131,9 @@
             <span class="sr-only">Toggle sidebar</span>
           </button>
           <a href="https://flowbite.com" class="flex items-center justify-between mr-8">
-            <span class="self-center text-xl  2xl:text-2xl  ml-3 text-white font-semibold whitespace-nowrap dark:text-white "><span
-                class="text-2xl 2xl:text-3xl  italic text-green-400">L</span>EGAL</span>
+            <span class="self-center text-xl  2xl:text-2xl  ml-3 text-white font-semibold whitespace-nowrap dark:text-white ">
+             
+                LEGAL</span>
             <img
               src="https://media.licdn.com/dms/image/v2/D560BAQEaOr1PqYeV6A/company-logo_200_200/company-logo_200_200/0/1731849540090/legal_plus_tech_logo?e=2147483647&v=beta&t=0jFIOW0dms0KWg2CuBnp3DzTY_NF2ou6F_8I2USZH2s"
               class="mr-3 ml-3 h-8 rounded-sm" alt="Flowbite Logo" />
@@ -98,27 +156,64 @@
           </form>
         </div>
         <div class="flex items-center lg:order-2">
-          <button type="button" data-drawer-toggle="drawer-navigation" aria-controls="drawer-navigation"
-            class="hidden md:hidden hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
-            <span class="sr-only">Toggle search</span>
-            <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path clip-rule="evenodd" fill-rule="evenodd"
-                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z">
-              </path>
-            </svg>
-          </button>
-          <!-- Notifications -->
-          <button type="button" data-dropdown-toggle="notification-dropdown"
-            class="p-3 mr-1  text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
-            <span class="sr-only">View notifications</span>
-            <!-- Bell icon -->
-            <svg aria-hidden="true" class="w-6 h-6" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z">
-              </path>
-            </svg>
-          </button>
+          <div class="text-white text-[0.65rem] text-right p-1">
+
+            <p>meeting at 20:30 <br></p>
+            <p> at Bandung <br></p>
+            <p id="waktu"></p>
+
+<script>
+function updateWaktu() {
+    const sekarang = new Date();
+
+    // Format: Hari Tanggal Bulan | Jam:Menit
+    const hariArray = ["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"];
+    const bulanArray = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+    
+    const hari = hariArray[sekarang.getDay()];
+    const tanggal = sekarang.getDate();
+    const bulan = bulanArray[sekarang.getMonth()];
+
+    let jam = sekarang.getHours();
+    let menit = sekarang.getMinutes();
+    
+    // Tambah 0 jika kurang dari 10
+    if(jam < 10) jam = "0" + jam;
+    if(menit < 10) menit = "0" + menit;
+
+    document.getElementById("waktu").innerHTML = `${hari} ${tanggal} ${bulan} | ${jam}:${menit}`;
+}
+
+// Update tiap 1 menit
+updateWaktu(); // langsung jalan
+setInterval(updateWaktu, 60000);
+</script>
+
+          </div>
+            <!-- Notifications -->
+       <button type="button" data-dropdown-toggle="notification-dropdown"
+  class="relative p-3 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 
+  dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 
+  focus:ring-gray-300 dark:focus:ring-gray-600">
+
+  <!-- BADGE NOTIF -->
+  <span
+    class="absolute top-0.5 right-0.5 bg-green-600 text-white text-[10px] 
+    font-semibold w-4 h-4 flex items-center justify-center rounded-full shadow">
+    3
+  </span>
+
+  <span class="sr-only">View notifications</span>
+
+  <!-- Bell icon -->
+  <svg aria-hidden="true" class="w-6 h-6" fill="white" viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z">
+    </path>
+  </svg>
+</button>
+
           <!-- Dropdown menu -->
           <!-- NOTIFICATION DROPDOWN -->
           <div id="notification-dropdown"
@@ -222,19 +317,21 @@
             id="apps-dropdown">
             <div
               class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300">
-              Apps
+              New
             </div>
             <div class="grid grid-cols-3 gap-4 p-4">
-              <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group">
-                <svg aria-hidden="true"
-                  class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-                  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <div class="text-sm text-gray-900 dark:text-white">Sales</div>
-              </a>
+           <a href="#" onclick="openModalPengeluaran()"
+   class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group">
+    <svg aria-hidden="true"
+      class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+      fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd"
+        d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+        clip-rule="evenodd"></path>
+    </svg>
+    <div class="text-sm text-gray-900 dark:text-white">Pengeluaran</div>
+</a>
+
               <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group">
                 <svg aria-hidden="true"
                   class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
@@ -245,15 +342,21 @@
                 </svg>
                 <div class="text-sm text-gray-900 dark:text-white">Users</div>
               </a>
-              <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group">
-                <svg aria-hidden="true"
+   <button @click="openForm = true" x-cloak
+
+        class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 z-[9999]">
+        <svg aria-hidden="true"
                   class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
                   fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
                     d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z"
                     clip-rule="evenodd"></path>
                 </svg>
-                <div class="text-sm text-gray-900 dark:text-white">Inbox</div>
+  <div class="text-sm text-gray-900 dark:text-white">Tambah File</div>
+</button>
+
+
+       
               </a>
               <a href="#" class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group">
                 <svg aria-hidden="true"
@@ -334,78 +437,7 @@
             </div>
           </div>
 
-          <!-- Dropdown menu -->
-          <div
-            class="hidden z-50 my-4 w-56 text-base list-none bg-white divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
-            id="dropdown">
-            <div class="py-3 px-4">
-              <span class="block text-sm font-semibold text-gray-900 dark:text-white">Neil Sims</span>
-              <span class="block text-sm text-gray-900 truncate dark:text-white">name@flowbite.com</span>
-            </div>
-            <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
-              <li>
-                <a href="#"
-                  class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">My
-                  profile</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Account
-                  settings</a>
-              </li>
-            </ul>
-            <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
-              <li>
-                <a href="#"
-                  class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg
-                    class="mr-2 icon text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                  My likes</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"><svg
-                    class="mr-2 icon text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z">
-                    </path>
-                  </svg>
-                  Collections</a>
-              </li>
-              <li>
-                <a href="#"
-                  class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                  <span class="flex items-center">
-                    <svg aria-hidden="true" class="mr-2 icon text-primary-600 dark:text-primary-500"
-                      fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd"
-                        d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                        clip-rule="evenodd"></path>
-                    </svg>
-                    Pro version
-                  </span>
-                  <svg aria-hidden="true" class="icon text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clip-rule="evenodd"></path>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-            <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
-              <li>
-                <a href="#"
-                  class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign
-                  out</a>
-              </li>
-            </ul>
-          </div>
+      
         </div>
       </div>
     </nav>
@@ -433,68 +465,134 @@
           </div>
         </form>
         <ul class="  space-y-2 border-gray-200 dark:border-gray-700">
-          <li>
-       <a href="/oper"
-  class="group flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-  
-  <svg xmlns="http://www.w3.org/2000/svg"
-    class="icon text-green-700 flex-shrink-0 icon"
-    fill="none" viewBox="0 0 24 24"
-    stroke-width="2" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M11 19V6M7 19V10M15 19v-4M19 19v-8" />
-  </svg>
+       <li class="group relative">
+  <a href="/oper"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
+    <svg xmlns="http://www.w3.org/2000/svg"
+      class="icon text-green-700 flex-shrink-0"
+      fill="none" viewBox="0 0 24 24"
+      stroke-width="2" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11 19V6M7 19V10M15 19v-4M19 19v-8" />
+    </svg>
 
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Overview
+    </span>
 
-</a>
-          </li>
-          <li>
-            <a href="/statistik"
-              class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
+  </a>
+</li>
+       <li class="group relative">
+  <a href="/statistik"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 8-8" />
               </svg>
 
-            </a>
-          </li>
-          <li>
-            <a href="/calendar"
-              class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Pekerjaan
+    </span>
+
+  </a>
+</li>
+       <li class="group relative">
+  <a href="/calendar"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" class="w-5 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7H3v10a2 2 0 002 2z" />
               </svg>
 
-  
-            </a>
-          </li>
-          <li>
-            <a href="/employee"
-              class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Calendar
+    </span>
+
+  </a>
+</li>
+       <li class="group relative">
+  <a href="/employee"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+   <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" class="w-5 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a4 4 0 100-8 4 4 0 000 8z" />
               </svg>
 
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Karyawan
+    </span>
 
-            </a>
-          </li>
-          <li>
-            <a href="/test"
-              class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
+  </a>
+</li>
+       <li class="group relative">
+  <a href="/test"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+
+       <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" >
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h6l2 3h10v11H3V7z" />
               </svg>
 
-              
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Document
+    </span>
 
-            </a>
-          </li>
+  </a>
+</li>
+       <li class="group relative">
+  <a href="/jurnal"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 8h18M3 12h12m-9 4h3m-6 4h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+
+
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Jurnal
+    </span>
+
+  </a>
+</li>
+
+
           {{-- <li>
             <a href="/anjas"
               class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
@@ -508,49 +606,50 @@
 
             </a>
           </li> --}}
-          <li>
-            <a href="/jurnal"
-              class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M3 8h18M3 12h12m-9 4h3m-6 4h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-
-
-
-            </a>
-          </li>
-          <li>
-            <a href="/case"
-              class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
+       <li class="group relative">
+  <a href="/case"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M12 3v18m0-18l6 6m-6-6L6 9m9 12H9m9-9h-6m-6 0h6" />
               </svg>
 
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Tugas
+    </span>
 
-
-            </a>
-          </li>
-          <li>
-            <a href="/help"
-              class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <svg class="h-5 w-5 2xl:w-6 2xl:h-6 text-red-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+  </a>
+</li>
+       <li class="group relative">
+  <a href="/help"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+          <svg class="h-5 w-5 2xl:w-6 2xl:h-6 text-red-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor" class="icon">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
               </svg>
 
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Bantuan
+    </span>
 
-            </a>
-          </li>
+  </a>
+</li>
+      
+  
         </ul>
-        <ul class="space-y-2">
-
-
-        </ul>
+    
 
       </div>
 
@@ -615,6 +714,67 @@
     </div>
 
   </div>
+
+
+<div id="modalPengeluaran" class="fixed inset-0 bg-black/40 hidden flex items-center justify-center z-50">
+
+    <div class="bg-white w-full max-w-lg rounded-xl shadow-lg p-6 animate-scaleIn">
+
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Tambah Pengeluaran</h2>
+
+        <!-- Form dummy -->
+        <form class="space-y-4">
+
+            <div>
+                <label class="text-sm font-medium">Tipe Pengeluaran</label>
+                <select class="w-full mt-1 px-3 py-2 border rounded-md">
+                    <option>Transport</option>
+                    <option>Operasional</option>
+                    <option>Konsumsi</option>
+                    <option>Lainnya</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="text-sm font-medium">Deskripsi</label>
+                <input type="text" class="w-full mt-1 px-3 py-2 border rounded-md"
+                    placeholder="Contoh: Pembelian ATK">
+            </div>
+
+            <div>
+                <label class="text-sm font-medium">Nominal</label>
+                <input type="number" class="w-full mt-1 px-3 py-2 border rounded-md"
+                    placeholder="Contoh: 250000">
+            </div>
+
+            <div>
+                <label class="text-sm font-medium">Tenggat / Tanggal</label>
+                <input type="date" class="w-full mt-1 px-3 py-2 border rounded-md">
+            </div>
+
+            <div class="flex justify-end gap-3 mt-6">
+                <button type="button" onclick="closeModalPengeluaran()"
+                    class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg">
+                    Tutup
+                </button>
+
+                <button type="button"
+                    class="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg shadow">
+                    Oke
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<script>
+function openModalPengeluaran() {
+    document.getElementById('modalPengeluaran').classList.remove('hidden');
+}
+function closeModalPengeluaran() {
+    document.getElementById('modalPengeluaran').classList.add('hidden');
+}
+</script>
 
 </body>
 

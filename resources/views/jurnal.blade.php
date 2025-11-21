@@ -12,7 +12,7 @@
             <h1 class="text-3xl font-semibold text-gray-800">Jurnal Biaya</h1>
         </div>
 
-        <button class="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg shadow">
+        <button id="openModal" class="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg shadow">
             Tambah Pengeluaran
         </button>
     </div>
@@ -129,5 +129,95 @@
     </div>
 
 </div>
+<!-- MODAL OVERLAY -->
+<div id="modalPengeluaran" class="fixed inset-0 bg-black/40 hidden flex items-center justify-center z-50">
+    
+    <!-- MODAL BOX -->
+    <div class="bg-white w-full max-w-lg rounded-xl shadow-lg p-6 animate-scaleIn">
+
+        <!-- Header -->
+        <h2 class="text-xl font-semibold text-gray-800 mb-4">Tambah Pengeluaran</h2>
+
+        <!-- Form -->
+        <form class="space-y-4">
+
+            <!-- Tipe -->
+            <div>
+                <label class="text-sm font-medium">Tipe Pengeluaran</label>
+                <select class="w-full mt-1 px-3 py-2 border rounded-md">
+                    <option>Transport</option>
+                    <option>Operasional</option>
+                    <option>Konsumsi</option>
+                    <option>Lainnya</option>
+                </select>
+            </div>
+
+            <!-- Deskripsi -->
+            <div>
+                <label class="text-sm font-medium">Deskripsi</label>
+                <input type="text" class="w-full mt-1 px-3 py-2 border rounded-md"
+                    placeholder="Contoh: Pembelian ATK">
+            </div>
+
+            <!-- Nominal -->
+            <div>
+                <label class="text-sm font-medium">Nominal</label>
+                <input type="number" class="w-full mt-1 px-3 py-2 border rounded-md"
+                    placeholder="Contoh: 250000">
+            </div>
+
+            <!-- Tanggal -->
+            <div>
+                <label class="text-sm font-medium">Tenggat / Tanggal</label>
+                <input type="date" class="w-full mt-1 px-3 py-2 border rounded-md">
+            </div>
+
+            <!-- Footer Buttons -->
+            <div class="flex justify-end gap-3 mt-6">
+                <button type="button" id="closeModal"
+                    class="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg">
+                    Batal
+                </button>
+
+                <button type="submit"
+                    class="px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white rounded-lg shadow">
+                    Simpan
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- ANIMATION -->
+<style>
+    .animate-scaleIn {
+        animation: scaleIn 0.18s ease-out;
+    }
+    @keyframes scaleIn {
+        from { transform: scale(0.95); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+</style>
+<script>
+    const modal = document.getElementById('modalPengeluaran');
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.getElementById('closeModal');
+
+    openBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+    });
+
+    // Klik luar modal untuk tutup
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('hidden');
+        }
+    });
+</script>
 
 </x-utama>

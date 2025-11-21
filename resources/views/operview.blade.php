@@ -1,4 +1,6 @@
 <x-utama>
+<div x-data="documentApp()" >
+
 
 <!-- HEADER -->
 <div class="flex items-center space-x-3 w-full h-full -mt-5 ml-5 mb-10 
@@ -25,65 +27,78 @@
                 2xl:gap-8 2xl:mb-10">
 
         <!-- ===== AGENDA ===== -->
-        <div class="bg-white rounded-2xl shadow-lg shadow-black/10 border border-gray-100 p-8
-                    2xl:p-8">
-            
-            <!-- text-xl → +2 → text-3xl -->
-            <h2 class="text-xl font-semibold mb-4 
-                       2xl:text-3xl 2xl:mb-6">Agenda</h2>
+      <div class="bg-white rounded-2xl shadow-lg shadow-black/10 border border-gray-100 p-8
+            2xl:p-8">
 
-            <div class="space-y-5 2xl:space-y-7">
+    <!-- TITLE -->
+    <h2 class="text-xl font-semibold mb-6 
+               2xl:text-3xl 2xl:mb-7">Agenda</h2>
 
-                <!-- hijau -->
-                <div class="flex gap-3 items-start 2xl:gap-5">
-                    <!-- w-2 → w-[calc(1.5+2)] ≈ w-3.5 → pakai w-4 -->
-                    <div class="w-1.5 h-10 rounded-full bg-green-500 
-                                2xl:w-2 2xl:h-12"></div>
+    <!-- WRAPPER -->
+  <div class="flex items-start justify-start gap-20">
 
-                    <div>
-                        <!-- text-base → +2 → text-xl -->
-                        <p class="font-medium 2xl:text-xl">Meeting dengan klien</p>
 
-                        <!-- text-sm → +2 → text-lg -->
-                        <p class="text-gray-500 text-sm 2xl:text-lg">10:30 - 11:30</p>
-                    </div>
+        <!-- ============ AGENDA (TETAP) ============ -->
+        <div class="space-y-5 2xl:space-y-7">
+
+            <!-- hijau -->
+            <div class="flex gap-3 items-start 2xl:gap-5">
+                <div class="w-1.5 h-10 rounded-full bg-green-500 
+                            2xl:w-2 2xl:h-12"></div>
+                <div>
+                    <p class="font-medium 2xl:text-xl">Standup Meeting TIM</p>
+                    <p class="text-gray-500 text-sm 2xl:text-lg">08:00 - 08:30</p>
                 </div>
-
-                <!-- biru -->
-                <div class="flex gap-3 items-start 2xl:gap-5">
-                    <div class="w-1.5 h-10 rounded-full bg-blue-500 
-                                2xl:w-2 2xl:h-12"></div>
-                    <div>
-                        <p class="font-medium 2xl:text-xl">Meeting dengan partner</p>
-                        <p class="text-gray-500 text-sm 2xl:text-lg">10:30 - 11:30</p>
-                    </div>
-                </div>
-
-                <!-- merah -->
-                <div class="flex gap-3 items-start 2xl:gap-5">
-                    <div class="w-1.5 h-10 rounded-full bg-red-500 
-                                2xl:w-2 2xl:h-12"></div>
-                    <div>
-                        <p class="font-medium 2xl:text-xl">Zoom Meeting Online</p>
-                        <p class="text-gray-500 text-sm 2xl:text-lg">10:30 - 11:30</p>
-                    </div>
-                </div>
-
-                <!-- hijau lagi -->
-                <div class="flex gap-3 items-start 2xl:gap-5">
-                    <div class="w-1.5 h-10 rounded-full bg-green-500 
-                                2xl:w-2 2xl:h-12"></div>
-                    <div>
-                        <p class="font-medium 2xl:text-xl">Gmeet dengan klien</p>
-                        <p class="text-gray-500 text-sm 2xl:text-lg">10:30 - 11:30</p>
-                    </div>
-                </div>
-
             </div>
+
+            <!-- biru -->
+            <div class="flex gap-3 items-start 2xl:gap-5">
+                <div class="w-1.5 h-10 rounded-full bg-blue-500 
+                            2xl:w-2 2xl:h-12"></div>
+                <div>
+                    <p class="font-medium 2xl:text-xl">Review progress proyek</p>
+                    <p class="text-gray-500 text-sm 2xl:text-lg">09:30 - 10:15</p>
+                </div>
+            </div>
+
+            <!-- merah -->
+            <div class="flex gap-3 items-start 2xl:gap-5">
+                <div class="w-1.5 h-10 rounded-full bg-red-500 
+                            2xl:w-2 2xl:h-12"></div>
+                <div>
+                    <p class="font-medium 2xl:text-xl">Call dengan klien</p>
+                    <p class="text-gray-500 text-sm 2xl:text-lg">11:00 - 11:45</p>
+                </div>
+            </div>
+
+            <!-- hijau lagi -->
+            <div class="flex gap-3 items-start 2xl:gap-5">
+                <div class="w-1.5 h-10 rounded-full bg-green-500 
+                            2xl:w-2 2xl:h-12"></div>
+                <div>
+                    <p class="font-medium 2xl:text-xl">Internal brainstorming</p>
+                    <p class="text-gray-500 text-sm 2xl:text-lg">14:00 - 15:00</p>
+                </div>
+            </div>
+
         </div>
 
+        <!-- ============ DONUT CHART (BESAR & LEBIH KIRI) ============ -->
+    
+
+           <div class="ml-3 w-[200px] h-[200px] 2xl:w-[260px] 2xl:h-[260px]">
+    <canvas id="agendaDonut"></canvas>
+</div>
+
+        
+
+    </div>
+</div>
+
+
+
         <!-- ===== TUGAS ===== -->
-        <div class="bg-white rounded-2xl shadow-lg shadow-black/10 border border-gray-100 p-6 
+<div class="bg-white rounded-2xl shadow-lg shadow-black/10 border border-gray-100 p-6 
                     2xl:p-8">
 
             <h2 class="text-xl font-semibold mb-4 
@@ -132,6 +147,7 @@
                 </div>
 
             </div>
+           
         </div>
 
     </div>
@@ -211,6 +227,16 @@
             <span class="mt-2 2xl:mt-3 inline-block bg-green-100 text-green-700 text-xs 2xl:text-sm px-3 py-1 rounded-full">
                 Terbuka • Baru dibuat
             </span>
+
+            <div class="mt-3 2xl:mt-4 space-y-1 2xl:space-y-2 text-sm 2xl:text-base">
+                <p>Dana deposit: <b>Rp 50.000.000</b></p>
+                <p>Sisa tagihan: <b>Rp 3.000.000</b></p>
+                <p>Total semua biaya: <b>Rp 20.000.000</b></p>
+            </div>
+        </div>
+
+        <div class="pl-3 2xl:pl-4 border-l-4 border-cyan-400">
+          
 
             <div class="mt-3 2xl:mt-4 space-y-1 2xl:space-y-2 text-sm 2xl:text-base">
                 <p>Dana deposit: <b>Rp 50.000.000</b></p>
@@ -331,5 +357,42 @@ function calendarComponent() {
 }
 </script>
 
+</div>
+
+<!-- CHART.JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+new Chart(document.getElementById('agendaDonut'), {
+    type: 'doughnut',
+    data: {
+        labels: ["Standup", "Review", "Call Klien", "Brainstorming"],
+        datasets: [{
+            data: [30, 45, 45, 60],
+
+            /* WARNA SOFT / PASTEL */
+            backgroundColor: [
+                "rgba(34, 197, 94, 0.35)",   // soft green
+                "rgba(59, 130, 246, 0.35)",  // soft blue
+                "rgba(239, 68, 68, 0.35)",   // soft red
+                "rgba(13, 148, 136, 0.35)",  // soft teal
+            ],
+            borderColor: [
+                "rgba(34, 197, 94, 0.5)",
+                "rgba(59, 130, 246, 0.5)",
+                "rgba(239, 68, 68, 0.5)",
+                "rgba(13, 148, 136, 0.5)",
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        cutout: "60%",
+        plugins: {
+            legend: { display: false }
+        }
+    }
+});
+</script>
 
 </x-utama>
