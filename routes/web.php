@@ -4,11 +4,18 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/invoice', function () {
+    return view('invoice');
+});
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('operview');
 });
 Route::get('/case', function () {
     return view('case');
+});
+Route::get('/cases', function () {
+    return view('cases');
 });
 
 Route::get('/deadline', function () {
@@ -39,6 +46,9 @@ Route::get('/employee', function () {
 });
 Route::get('/statistik', function () {
     return view('statistik');
+});
+Route::get('/detail', function () {
+    return view('detail');
 });
 
  Route::middleware(['auth','verified'])->group(function () {

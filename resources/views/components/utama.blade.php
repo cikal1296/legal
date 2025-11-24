@@ -7,6 +7,8 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>Legal Tech</title>
+<link rel="icon" href="{{ asset('img/fix.png') }}" type="image/png">
+<link rel="shortcut icon" href="{{ asset('img/fix.png') }}" type="image/png">
 
   <!-- Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
@@ -14,6 +16,7 @@
   <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
   <!-- Scripts -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
@@ -110,7 +113,7 @@
   <!-- Page Content -->
   <div class="antialiased bg-gray-50 dark:bg-gray-900">
     <nav
-      class="bg-black  border-gray-200 px-4 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50 2xl:py-2">
+      class="bg-black  border-gray-200 px-4 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50 2xl:py-1">
       <div class="flex flex-wrap justify-between items-center">
         <div class="flex justify-start items-center">
           <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation"
@@ -135,7 +138,7 @@
              
                 LEGAL</span>
             <img
-              src="https://media.licdn.com/dms/image/v2/D560BAQEaOr1PqYeV6A/company-logo_200_200/company-logo_200_200/0/1731849540090/legal_plus_tech_logo?e=2147483647&v=beta&t=0jFIOW0dms0KWg2CuBnp3DzTY_NF2ou6F_8I2USZH2s"
+              src="\img\fix.png"
               class="mr-3 ml-3 h-8 rounded-sm" alt="Flowbite Logo" />
           </a>
           <form action="#" method="GET" class="hidden md:block md:pl-2">
@@ -192,7 +195,7 @@ setInterval(updateWaktu, 60000);
           </div>
             <!-- Notifications -->
        <button type="button" data-dropdown-toggle="notification-dropdown"
-  class="relative p-3 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 
+  class="relative p-1 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 
   dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 
   focus:ring-gray-300 dark:focus:ring-gray-600">
 
@@ -206,7 +209,7 @@ setInterval(updateWaktu, 60000);
   <span class="sr-only">View notifications</span>
 
   <!-- Bell icon -->
-  <svg aria-hidden="true" class="w-6 h-6" fill="white" viewBox="0 0 20 20"
+  <svg aria-hidden="true" class="w-6 h-6 2xl:w-7 2xl:h-7" fill="white" viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg">
     <path
       d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z">
@@ -254,7 +257,7 @@ setInterval(updateWaktu, 60000);
               <!-- ITEM 2 -->
               <a href="#" class="flex items-start gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700">
                 <div class="mt-1">
-                  <svg class="w-6 h-6 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg class="w-7 h-7 text-green-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                       d="M9 12h6m-3-3v6m9-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
@@ -302,10 +305,10 @@ setInterval(updateWaktu, 60000);
 
           <!-- Apps -->
           <button type="button" data-dropdown-toggle="apps-dropdown"
-            class="p-2 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
+            class="pr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600">
             <span class="sr-only">View notifications</span>
             <!-- Icon -->
-            <svg class="w-6 h-6" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-6 h-6 2xl:w-7 2xl:h-7 " fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
               </path>
@@ -488,13 +491,55 @@ setInterval(updateWaktu, 60000);
   </a>
 </li>
        <li class="group relative">
+  <a href="/cases"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+<svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700 flex-shrink-0"
+      fill="none" viewBox="0 0 24 24"
+    stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M4 10l8-5 8 5M6 10v8m4-8v8m4-8v8m4-8v8M3 18h18" />
+</svg>
+
+
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Manage Cases
+    </span>
+
+  </a>
+</li>
+       <li class="group relative">
   <a href="/statistik"
      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
-  <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
+ <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700 flex-shrink-0"
+      fill="none" viewBox="0 0 24 24"
+    stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+    <path stroke-linecap="round" stroke-linejoin="round" d="M6 20v-1a6 6 0 0112 0v1" />
+</svg>
+
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Contact
+            </span>
+
+  </a>
+</li>
+   <li class="group relative">
+  <a href="/case"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
                 stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v18h18" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 8-8" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 3v18m0-18l6 6m-6-6L6 9m9 12H9m9-9h-6m-6 0h6" />
               </svg>
 
     <!-- Tooltip: FIXED biar keluar dari overflow -->
@@ -503,7 +548,7 @@ setInterval(updateWaktu, 60000);
                  px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
                  opacity-0 group-hover:opacity-100 transition-opacity
                  pointer-events-none">
-      Pekerjaan
+      Tugas
     </span>
 
   </a>
@@ -529,7 +574,28 @@ setInterval(updateWaktu, 60000);
 
   </a>
 </li>
-       <li class="group relative">
+   <li class="group relative">
+  <a href="/jurnal"
+     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 8h18M3 12h12m-9 4h3m-6 4h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+
+
+    <!-- Tooltip: FIXED biar keluar dari overflow -->
+    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
+                 bg-white text-green-500 text-sm font-medium
+                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
+                 opacity-0 group-hover:opacity-100 transition-opacity
+                 pointer-events-none">
+      Jurnal
+    </span>
+
+  </a>
+</li>
+       {{-- <li class="group relative">
   <a href="/employee"
      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
 
@@ -549,7 +615,7 @@ setInterval(updateWaktu, 60000);
     </span>
 
   </a>
-</li>
+</li> --}}
        <li class="group relative">
   <a href="/test"
      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -571,13 +637,15 @@ setInterval(updateWaktu, 60000);
   </a>
 </li>
        <li class="group relative">
-  <a href="/jurnal"
+  <a href="/invoice"
      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M3 8h18M3 12h12m-9 4h3m-6 4h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700 w-5 h-5" fill="none" viewBox="0 0 24 24"
+     stroke="currentColor" stroke-width="2">
+  <path stroke-linecap="round" stroke-linejoin="round"
+        d="M7 3h7l4 4v12a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z" />
+  <path stroke-linecap="round" stroke-linejoin="round"
+        d="M9 12h6M9 16h6M9 8h3" />
+</svg>
 
 
     <!-- Tooltip: FIXED biar keluar dari overflow -->
@@ -586,11 +654,12 @@ setInterval(updateWaktu, 60000);
                  px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
                  opacity-0 group-hover:opacity-100 transition-opacity
                  pointer-events-none">
-      Jurnal
+      invoice
     </span>
 
   </a>
 </li>
+    
 
 
           {{-- <li>
@@ -606,26 +675,7 @@ setInterval(updateWaktu, 60000);
 
             </a>
           </li> --}}
-       <li class="group relative">
-  <a href="/case"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 3v18m0-18l6 6m-6-6L6 9m9 12H9m9-9h-6m-6 0h6" />
-              </svg>
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Tugas
-    </span>
-
-  </a>
-</li>
+    
        <li class="group relative">
   <a href="/help"
      class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
@@ -654,7 +704,7 @@ setInterval(updateWaktu, 60000);
       </div>
 
     </aside>
-    <main data-aos="fade-left" class="p-4 mt-10 pt-20 lg:ml-20">
+    <main data-aos="fade-left" class="p-4 mt-5 pt-20 lg:ml-20">
 
       {{ $slot }}
     </main>
