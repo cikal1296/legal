@@ -6,9 +6,16 @@
 
 @layer components{
 .icon {
-    @apply  2xl:h-7 2xl:w-7 w-6 h-6;
+   @apply w-5 h-5 xl:w-6 xl:h-6 2xl:w-7 2xl:h-7 ;
+
    
 }
+@media screen and (min-width: 1024px) {
+    body {
+        zoom: 0.9;
+    }
+}
+
 
 
 }

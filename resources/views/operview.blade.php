@@ -1,10 +1,9 @@
 <x-utama>
-    <div x-data="documentApp()">
 
 
         <!-- HEADER -->
-        <div class="flex items-center space-x-3 w-full h-full -mt-5 ml-5 mb-10 
-            2xl:space-x-5 2xl:w-full 2xl:h-full 2xl:-mt-1 2xl:ml-7 2xl:mb-10">
+        <div class="flex items-center space-x-3 w-full h-full mt-5 ml-5 mb-5 
+            2xl:space-x-5 2xl:w-full 2xl:h-full 2xl:-mt-1 2xl:ml-7 2xl:mb-5">
 
             <svg class="w-12 h-12 text-teal-500 
                 2xl:w-14 2xl:h-14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -16,180 +15,168 @@
             <h1 class="text-4xl font-semibold text-gray-800 
                2xl:text-5xl">Papan Informasi Personal</h1>
         </div>
+<div class="p-5">
+
+<div  style="border-top-left-radius: 200px; border-bottom-left-radius: 200px;" class="flex mb-10  gap-0 items-center bg-white p-0 rounded-2xl shadow-md border border-gray-200 overflow-hidden">
+
+  <!-- CLOCK -->
+<!-- CLOCK -->
+<div class="p-6 bg-white z-10">
+  <div class="w-64 h-64 rounded-full bg-black border border-gray-700 relative flex items-center justify-center">
+
+    <svg id="clock" viewBox="0 0 100 100" class="w-[92%] h-[92%] relative">
+
+      <!-- Lingkaran -->
+      <circle cx="50" cy="50" r="48" stroke="#444" stroke-width="2" fill="transparent" />
+
+      <!-- Angka 1–12 -->
+      <g id="numbers" font-size="9" fill="white" text-anchor="middle"></g>
+
+      <!-- Jarum Jam -->
+      <line id="hourHand" x1="50" y1="50" x2="50" y2="30" 
+            stroke="white" stroke-width="2.8" stroke-linecap="round" />
+
+      <!-- Jarum Menit -->
+      <line id="minuteHand" x1="50" y1="50" x2="50" y2="22"
+            stroke="white" stroke-width="2" stroke-linecap="round" />
+
+      <!-- Jarum Detik -->
+      <line id="secondHand" x1="50" y1="50" x2="50" y2="18"
+            stroke="red" stroke-width="1.4" stroke-linecap="round" />
+
+    </svg>
+
+  </div>
+</div>
+
+<script>
+  // Tambah angka 1–12
+  const numbers = document.getElementById("numbers");
+  for (let i = 1; i <= 12; i++) {
+    let angle = (i - 3) * 30;                                 // Rotasi
+    let rad = (angle * Math.PI) / 180;
+    let x = 50 + 38 * Math.cos(rad);                         // radius angka
+    let y = 50 + 38 * Math.sin(rad);
+
+    numbers.innerHTML += `<text x="${x}" y="${y}" dy="3">${i}</text>`;
+  }
+
+  // Biar jam bergerak
+  function updateClock() {
+    const now = new Date();
+
+    const seconds = now.getSeconds();
+    const minutes = now.getMinutes();
+    const hours = now.getHours() % 12;
+
+    // hitungan derajat
+    const secondDeg = seconds * 6;
+    const minuteDeg = minutes * 6 + seconds * 0.1;
+    const hourDeg = hours * 30 + minutes * 0.5;
+
+    document.getElementById("secondHand").setAttribute("transform", `rotate(${secondDeg} 50 50)`);
+    document.getElementById("minuteHand").setAttribute("transform", `rotate(${minuteDeg} 50 50)`);
+    document.getElementById("hourHand").setAttribute("transform", `rotate(${hourDeg} 50 50)`);
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
 
 
-        <div class="p-6 bg-gray-50 min-h-screen 
-            2xl:p-8 2xl:min-h-[102vh]">
+  <!-- CONTENT (Agenda + Tasks) with rounded-left following the clock -->
+  <div class="flex-1 flex gap-4 bg-white p-6"
+     >
 
-            <!-- ================== ROW 1 — AGENDA + TUGAS ================== -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 
-                2xl:gap-8 2xl:mb-10">
+    <!-- AGENDA -->
+   <div class="flex-1 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+  <div class="flex items-center  gap-2 mb-3">
+      <span class="text-green-600">📅</span>
+      <p class="font-semibold text-gray-800">Agenda</p>
+  <span class="ml-[350px]"><        ></span>
+</div>
 
-                <!-- ===== AGENDA ===== -->
-                <div class="bg-white rounded-2xl shadow-lg shadow-black/10 border border-gray-100 p-8
-            2xl:p-8">
+  <div class="space-y-3">
 
-                    <!-- TITLE -->
-                    <h2 class="text-xl font-semibold mb-6 
-               2xl:text-3xl 2xl:mb-7">Agenda</h2>
-
-                    <!-- WRAPPER -->
-                    <div class="flex items-start justify-start gap-20">
-
-
-                        <!-- ============ AGENDA (TETAP) ============ -->
-                        <div class="space-y-5 2xl:space-y-7">
-
-                            <!-- hijau -->
-                            <div class="flex gap-3 items-start 2xl:gap-5">
-                                <div class="w-1.5 h-10 rounded-full bg-green-500 
-                            2xl:w-2 2xl:h-12"></div>
-                                <div>
-                                    <p class="font-medium 2xl:text-xl">Standup Meeting TIM</p>
-                                    <p class="text-gray-500 text-sm 2xl:text-lg">08:00 - 08:30</p>
-                                </div>
-                            </div>
-
-                            <!-- biru -->
-                            <div class="flex gap-3 items-start 2xl:gap-5">
-                                <div class="w-1.5 h-10 rounded-full bg-blue-500 
-                            2xl:w-2 2xl:h-12"></div>
-                                <div>
-                                    <p class="font-medium 2xl:text-xl">Review progress proyek</p>
-                                    <p class="text-gray-500 text-sm 2xl:text-lg">09:30 - 10:15</p>
-                                </div>
-                            </div>
-
-                            <!-- merah -->
-                            <div class="flex gap-3 items-start 2xl:gap-5">
-                                <div class="w-1.5 h-10 rounded-full bg-red-500 
-                            2xl:w-2 2xl:h-12"></div>
-                                <div>
-                                    <p class="font-medium 2xl:text-xl">Call dengan klien</p>
-                                    <p class="text-gray-500 text-sm 2xl:text-lg">11:00 - 11:45</p>
-                                </div>
-                            </div>
-
-                            <!-- hijau lagi -->
-                            <div class="flex gap-3 items-start 2xl:gap-5">
-                                <div class="w-1.5 h-10 rounded-full bg-green-500 
-                            2xl:w-2 2xl:h-12"></div>
-                                <div>
-                                    <p class="font-medium 2xl:text-xl">Internal brainstorming</p>
-                                    <p class="text-gray-500 text-sm 2xl:text-lg">14:00 - 15:00</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- ============ DONUT CHART (BESAR & LEBIH KIRI) ============ -->
-
-
-                        <div class="ml-3 w-[200px] h-[200px] 2xl:w-[260px] 2xl:h-[260px]">
-                            <canvas id="agendaDonut"></canvas>
-                        </div>
-
-
-
-                    </div>
-                </div>
-
-<!-- ===== TUGAS ===== -->
-<div class="bg-white rounded-2xl shadow-lg shadow-black/10 border border-gray-100 p-6 2xl:p-8">
-
-    <h2 class="text-xl font-semibold mb-4 2xl:text-3xl 2xl:mb-6">Tugas</h2>
-
-    <!-- ================= WRAPPER LIST + RINGKASAN ================= -->
-    <div class="flex flex-col md:flex-row gap-6 2xl:gap-8">
-
-        <!-- ========== LIST TUGAS ========== -->
-        <div class="flex-1 space-y-5 2xl:space-y-7">
-
-            <!-- item 1 -->
-            <div class="flex gap-3 items-start 2xl:gap-5">
-                <div class="w-2 h-2 mt-2 rounded-full bg-green-500 2xl:w-4 2xl:h-4 2xl:mt-2"></div>
-                <div>
-                    <p class="font-medium text-green-600 2xl:text-xl">Buat draft investasi</p>
-                    <p class="text-gray-500 text-sm 2xl:text-lg">10:30 - 11:30</p>
-                </div>
-            </div>
-
-            <!-- item 2 -->
-            <div class="flex gap-3 items-start 2xl:gap-5">
-                <div class="w-2 h-2 mt-2 rounded-full bg-blue-500 2xl:w-4 2xl:h-4 2xl:mt-2"></div>
-                <div>
-                    <p class="font-medium text-blue-600 2xl:text-xl">Buat draft perjanjian</p>
-                    <p class="text-gray-500 text-sm 2xl:text-lg">10:30 - 11:30</p>
-                </div>
-            </div>
-
-            <!-- item 3 -->
-            <div class="flex gap-3 items-start 2xl:gap-5">
-                <div class="w-2 h-2 mt-2 rounded-full bg-red-500 2xl:w-4 2xl:h-4 2xl:mt-2"></div>
-                <div>
-                    <p class="font-medium text-red-600 2xl:text-xl">Buat kasus posisi</p>
-                    <p class="text-gray-500 text-sm 2xl:text-lg">10:30 - 11:30</p>
-                </div>
-            </div>
-
-            <!-- item 4 -->
-            <div class="flex gap-3 items-start 2xl:gap-5">
-                <div class="w-2 h-2 mt-2 rounded-full bg-yellow-500 2xl:w-4 2xl:h-4 2xl:mt-2"></div>
-                <div>
-                    <p class="font-medium text-yellow-600 2xl:text-xl">Teliti dasar hukum</p>
-                    <p class="text-gray-500 text-sm 2xl:text-lg">10:30 - 11:30</p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- ========== RINGKASAN STATISTIK DI SAMPING ========== -->
-        <div class="flex flex-col gap-4 w-56">
-
-            <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
-                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200">
-                    <!-- ikon bisa diganti sesuai selera -->
-                    <span class="text-gray-600 font-bold">T</span>
-                </div>
-                <div>
-                    <p class="text-sm text-gray-500">Total Tugas</p>
-                    <p class="text-lg font-semibold text-gray-800" id="totalTugas">4</p>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
-                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-green-200">
-                    <span class="text-green-600 font-bold">S</span>
-                </div>
-                <div>
-                    <p class="text-sm text-gray-500">Selesai</p>
-                    <p class="text-lg font-semibold text-green-600" id="tugasSelesai">1</p>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-xl shadow hover:shadow-md transition">
-                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-red-200">
-                    <span class="text-red-600 font-bold">P</span>
-                </div>
-                <div>
-                    <p class="text-sm text-gray-500">Tertunda</p>
-                    <p class="text-lg font-semibold text-red-600" id="tugasTertunda">3</p>
-                </div>
-            </div>
-
-        </div>
-
+    <!-- 1 -->
+    <div class="flex gap-3 bg-gray-50 border border-gray-300 p-3 rounded-lg">
+      <div class="w-1 bg-blue-400 rounded"></div>
+      <div>
+        <p class="text-sm text-gray-700">Rapat Sinkronisasi Legal x Tech — Integrasi Sistem e-Contract</p>
+        <p class="text-xs text-gray-500">09:00 - 10:30</p>
+      </div>
     </div>
 
+    <!-- 2 -->
+    <div class="flex gap-3 bg-gray-50 border border-gray-300 p-3 rounded-lg">
+      <div class="w-1 bg-blue-400 rounded"></div>
+      <div>
+          <p class="text-sm text-gray-700">Review Draft Perjanjian Kerja Sama Vendor Teknologi</p>
+          <p class="text-xs text-gray-500">11:00 - 12:00</p>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="flex gap-3 bg-gray-50 border border-gray-300 p-3 rounded-lg">
+      <div class="w-1 bg-blue-400 rounded"></div>
+      <div>
+        <p class="text-sm text-gray-700">Analisis Risiko dan Compliance untuk Fitur Otomatisasi Dokumen</p>
+        <p class="text-xs text-gray-500">13:30 - 15:00</p>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
+    <!-- TASKS -->
+   <div class="flex-1 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
+  <div class="flex items-center gap-2 mb-3">
+    <span class="text-green-600">📝</span>
+    <p class="font-semibold text-gray-800">Tasks</p>
+        <input 
+  type="text" 
+  placeholder="Cari Task" 
+  class="px-3 py-0.5 text-xs border border-gray-300 rounded-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-300 w-32"
+/>
+  </div>
+
+  <div class="space-y-3">
+
+    <!-- 1 -->
+    <div class="flex gap-3 bg-gray-50 border border-gray-300 p-3 rounded-lg">
+      <div class="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
+      <div>
+        <p class="text-sm text-gray-700">Verifikasi dokumen legal untuk onboarding vendor baru</p>
+        <p class="text-xs text-gray-500">Due: Hari ini, 14:00</p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="flex gap-3 bg-gray-50 border border-gray-300 p-3 rounded-lg">
+      <div class="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
+      <div>
+        <p class="text-sm text-gray-700">Update template NDA sesuai perubahan regulasi terbaru</p>
+        <p class="text-xs text-gray-500">Due: Besok</p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="flex gap-3 bg-gray-50 border border-gray-300 p-3 rounded-lg">
+      <div class="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
+      <div>
+        <p class="text-sm text-gray-700">Review hasil QA untuk modul e-Signature</p>
+        <p class="text-xs text-gray-500">Due: 16:00</p>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
-                </div>
+  </div>
 
-            </div>
-
-
+</div>
 
 
             <!-- ================== ROW 2 — ID + INVOICE + PEKERJAAN + CALENDAR ================== -->
@@ -318,6 +305,33 @@
                             <span class="opacity-40" x-text="d"></span>
                         </template>
                     </div>
+                    <!-- Container utama (masuk ke card calendar) -->
+                    <div class=" bg-white space-y-4">
+
+                        <!-- Header -->
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-800">Matter</h3>
+                            <button class="text-green-700 hover:text-green-800 text-sm font-medium">Show more</button>
+                        </div>
+
+                        <!-- Task item -->
+                        <div class="flex items-start gap-3">
+                            <!-- Icon task -->
+                            <div class="flex-shrink-0">
+                                <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 3v18m0-18l6 6m-6-6L6 9m9 12H9m9-9h-6m-6 0h6" />
+                                </svg>
+                            </div>
+                            <!-- Deskripsi task -->
+                            <p class="text-gray-700 text-sm">
+                                Annisa Donna S.H telah menambahkan anda dalam <span class="font-medium">Pekerjaan
+                                    25030002 - SMAN 1 Bandung</span>
+                            </p>
+                        </div>
+                        <hr class=" border-gray-200">
+                    </div>
                 </div>
 
             </div>
@@ -392,39 +406,6 @@
     </div>
 
     <!-- CHART.JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script>
-        new Chart(document.getElementById('agendaDonut'), {
-            type: 'doughnut',
-            data: {
-                labels: ["Standup", "Review", "Call Klien", "Brainstorming"],
-                datasets: [{
-                    data: [30, 45, 45, 60],
-
-                    /* WARNA SOFT / PASTEL */
-                    backgroundColor: [
-                        "rgba(34, 197, 94, 0.35)",   // soft green
-                        "rgba(59, 130, 246, 0.35)",  // soft blue
-                        "rgba(239, 68, 68, 0.35)",   // soft red
-                        "rgba(13, 148, 136, 0.35)",  // soft teal
-                    ],
-                    borderColor: [
-                        "rgba(34, 197, 94, 0.5)",
-                        "rgba(59, 130, 246, 0.5)",
-                        "rgba(239, 68, 68, 0.5)",
-                        "rgba(13, 148, 136, 0.5)",
-                    ],
-                    borderWidth: 2
-                }]
-            },
-            options: {
-                cutout: "60%",
-                plugins: {
-                    legend: { display: false }
-                }
-            }
-        });
-    </script>
-
+    
+</div>
 </x-utama>

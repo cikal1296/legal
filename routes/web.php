@@ -9,13 +9,19 @@ Route::get('/invoice', function () {
 });
 
 Route::get('/', function () {
-    return view('operview');
+    return view('welcome');
 });
 Route::get('/case', function () {
     return view('case');
 });
 Route::get('/cases', function () {
     return view('cases');
+});
+Route::get('/dfcase', function () {
+    return view('dfcases');
+});
+Route::get('/setting', function () {
+    return view('setting');
 });
 
 Route::get('/deadline', function () {

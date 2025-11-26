@@ -113,7 +113,7 @@
   <!-- Page Content -->
   <div class="antialiased bg-gray-50 dark:bg-gray-900">
     <nav
-      class="bg-black  border-gray-200 px-4 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50 2xl:py-1">
+      class="bg-black  border-gray-200 px-4 dark:bg-gray-800 py-1 dark:border-gray-700 fixed left-0 right-0 top-0 z-50 2xl:py-2">
       <div class="flex flex-wrap justify-between items-center">
         <div class="flex justify-start items-center">
           <button data-drawer-target="drawer-navigation" data-drawer-toggle="drawer-navigation"
@@ -134,7 +134,7 @@
             <span class="sr-only">Toggle sidebar</span>
           </button>
           <a href="https://flowbite.com" class="flex items-center justify-between mr-8">
-            <span class="self-center text-xl  2xl:text-2xl  ml-3 text-white font-semibold whitespace-nowrap dark:text-white ">
+            <span class="self-center text-[25px]  2xl:text-3xl  ml-3 text-white font-semibold whitespace-nowrap dark:text-white ">
              
                 LEGAL</span>
             <img
@@ -153,7 +153,7 @@
                 </svg>
               </div>
               <input type="text" name="email" id="topbar-search"
-                class="bg-gray-50 border rounded-md border-gray-300 text-gray-900 text-xs 2xl:text-[17px] 2xl:w-[400px] focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              class="bg-gray-50 border rounded-md border-gray-300 text-gray-900 text-xs 2xl:text-[17px] w-full 2xl:w-[400px] focus:ring-primary-500 focus:border-primary-500 block pl-10 p-0.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                 placeholder="cari dalam akun james" />
             </div>
           </form>
@@ -161,8 +161,8 @@
         <div class="flex items-center lg:order-2">
           <div class="text-white text-[0.65rem] text-right p-1">
 
-            <p>meeting at 20:30 <br></p>
-            <p> at Bandung <br></p>
+            <p>meeting at 20:30 | Bandung <br></p>
+          
             <p id="waktu"></p>
 
 <script>
@@ -444,270 +444,118 @@ setInterval(updateWaktu, 60000);
         </div>
       </div>
     </nav>
+  <aside id="sidebar" class="fixed left-0 top-20 xl:top-20 xl:bottom-15 2xl:top-24 z-40 rounded-2xl shadow-md
+    w-12 transition-all duration-300 overflow-hidden bg-white dark:bg-gray-800 border-gray-500 dark:border-gray-700 group">
+  <div class="flex flex-col py-5 px-1 gap-2 h-full">
 
-    <!-- Sidebar -->
+    <a href="/oper" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11 19V6M7 19V10M15 19v-4M19 19v-8" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Overview</span>
+    </a>
 
-    <aside
-      class="fixed shadow-md top-32 2xl:top-44 border-gray-500 left-0 z-40 w-auto  rounded-2xl max-h-[calc(100vh-4rem)]  transition-transform -translate-x-full bg-white  md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
-      aria-label="Sidenav" id="drawer-navigation">
-      <div class="overflow-y-auto border-gray-300 py-5 rounded-2xl px-3 h-full bg-white dark:bg-gray-800">
-        <form action="#" method="GET" class="md:hidden mb-2">
-          <label for="sidebar-search" class="sr-only">Siiiearch</label>
-          <div class="relative">
-            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-              <svg class="w-3 h-3 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z">
-                </path>
-              </svg>
-            </div>
-            <input type="text" name="search" id="sidebar-search"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-              placeholder="cari dalam akun james" />
-          </div>
-        </form>
-        <ul class="  space-y-2 border-gray-200 dark:border-gray-700">
-       <li class="group relative">
-  <a href="/oper"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+    <a href="/dfcase" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M4 10l8-5 8 5M6 10v8m4-8v8m4-8v8m4-8v8M3 18h18" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Manage Cases</span>
+    </a>
 
-    <svg xmlns="http://www.w3.org/2000/svg"
-      class="icon text-green-700 flex-shrink-0"
-      fill="none" viewBox="0 0 24 24"
-      stroke-width="2" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M11 19V6M7 19V10M15 19v-4M19 19v-8" />
+    <a href="/statistik" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 20v-1a6 6 0 0112 0v1" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Contact</span>
+    </a>
+
+    <a href="/case" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m0-18l6 6m-6-6L6 9m9 12H9m9-9h-6m-6 0h6" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Tugas</span>
+    </a>
+
+    <a href="/calendar" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7H3v10a2 2 0 002 2z" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Calendar</span>
+    </a>
+
+    <a href="/jurnal" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 8h18M3 12h12m-9 4h3m-6 4h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Jurnal</span>
+    </a>
+
+    <a href="/test" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h6l2 3h10v11H3V7z" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Document</span>
+    </a>
+
+    <a href="/invoice" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="icon text-green-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7 3h7l4 4v12a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6M9 16h6M9 8h3" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Invoice</span>
+    </a>
+
+    <hr class="my-2 border-gray-300 dark:border-gray-600 pb-10">
+
+    <a href="/setting" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mt-auto">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="icon h-6 w-6 text-green-700 flex-shrink-0 transition-transform duration-500 group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M259.1 73.5C262.1 58.7 275.2 48 290.4 48L350.2 48C365.4 48 378.5 58.7 381.5 73.5L396 143.5C410.1 149.5 423.3 157.2 435.3 166.3L503.1 143.8C517.5 139 533.3 145 540.9 158.2L570.8 210C578.4 223.2 575.7 239.8 564.3 249.9L511 297.3C511.9 304.7 512.3 312.3 512.3 320C512.3 327.7 511.8 335.3 511 342.7L564.4 390.2C575.8 400.3 578.4 417 570.9 430.1L541 481.9C533.4 495 517.6 501.1 503.2 496.3L435.4 473.8C423.3 482.9 410.1 490.5 396.1 496.6L381.7 566.5C378.6 581.4 365.5 592 350.4 592L290.6 592C275.4 592 262.3 581.3 259.3 566.5L244.9 496.6C230.8 490.6 217.7 482.9 205.6 473.8L137.5 496.3C123.1 501.1 107.3 495.1 99.7 481.9L69.8 430.1C62.2 416.9 64.9 400.3 76.3 390.2L129.7 342.7C128.8 335.3 128.4 327.7 128.4 320C128.4 312.3 128.9 304.7 129.7 297.3L76.3 249.8C64.9 239.7 62.3 223 69.8 209.9L99.7 158.1C107.3 144.9 123.1 138.9 137.5 143.7L205.3 166.2C217.4 157.1 230.6 149.5 244.6 143.4L259.1 73.5zM320.3 400C364.5 399.8 400.2 363.9 400 319.7C399.8 275.5 363.9 239.8 319.7 240C275.5 240.2 239.8 276.1 240 320.3C240.2 364.5 276.1 400.2 320.3 400z"/>
     </svg>
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Overview
-    </span>
-
+    <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300 group-hover:opacity-100 group-hover:w-auto">Setting</span>
   </a>
-</li>
-       <li class="group relative">
-  <a href="/cases"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-<svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700 flex-shrink-0"
-      fill="none" viewBox="0 0 24 24"
-    stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M4 10l8-5 8 5M6 10v8m4-8v8m4-8v8m4-8v8M3 18h18" />
-</svg>
+    <a href="/help" class="flex items-center gap-4 p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 mt-auto">
+      <svg class="icon text-red-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+      </svg>
+      <span class="opacity-0 w-0 overflow-hidden whitespace-nowrap transition-all duration-300">Bantuan</span>
+    </a>
 
+  </div>
+</aside>
+<main id="main-content" class="transition-all duration-300 ml-12 lg:ml-10 p-2 pt-7">
+  <div data-aos="fade-left" class="relative top-0 left-0">
+    {{ $slot }}
+  </div>
+</main>
+<script>
+  const sidebar = document.getElementById('sidebar');
+  const main = document.querySelector('main');
 
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Manage Cases
-    </span>
+  const wCollapsed = 48; // 12*4
+  const wExpanded = 224; // 56*4
 
-  </a>
-</li>
-       <li class="group relative">
-  <a href="/statistik"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+  sidebar.addEventListener('mouseenter', () => {
+    sidebar.classList.remove('w-12');
+    sidebar.classList.add('w-56');
+    sidebar.querySelectorAll('span').forEach(span => {
+      span.classList.remove('opacity-0','w-0','overflow-hidden');
+      span.classList.add('opacity-100','w-auto','overflow-visible');
+    });
+    if(main) main.style.marginLeft = `${wExpanded}px`;
+  });
 
- <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700 flex-shrink-0"
-      fill="none" viewBox="0 0 24 24"
-    stroke="currentColor" stroke-width="2">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
-    <path stroke-linecap="round" stroke-linejoin="round" d="M6 20v-1a6 6 0 0112 0v1" />
-</svg>
+  sidebar.addEventListener('mouseleave', () => {
+    sidebar.classList.remove('w-56');
+    sidebar.classList.add('w-12');
+    sidebar.querySelectorAll('span').forEach(span => {
+      span.classList.add('opacity-0','w-0','overflow-hidden');
+      span.classList.remove('opacity-100','w-auto','overflow-visible');
+    });
+    if(main) main.style.marginLeft = `${wCollapsed}px`;
+  });
+</script>
 
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Contact
-            </span>
-
-  </a>
-</li>
-   <li class="group relative">
-  <a href="/case"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 3v18m0-18l6 6m-6-6L6 9m9 12H9m9-9h-6m-6 0h6" />
-              </svg>
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Tugas
-    </span>
-
-  </a>
-</li>
-       <li class="group relative">
-  <a href="/calendar"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
-    <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" class="w-5 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M8 7V3m8 4V3M3 11h18M5 19h14a2 2 0 002-2V7H3v10a2 2 0 002 2z" />
-              </svg>
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Calendar
-    </span>
-
-  </a>
-</li>
-   <li class="group relative">
-  <a href="/jurnal"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M3 8h18M3 12h12m-9 4h3m-6 4h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Jurnal
-    </span>
-
-  </a>
-</li>
-       {{-- <li class="group relative">
-  <a href="/employee"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
-   <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" class="w-5 h-4">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M12 12a4 4 0 100-8 4 4 0 000 8z" />
-              </svg>
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Karyawan
-    </span>
-
-  </a>
-</li> --}}
-       <li class="group relative">
-  <a href="/test"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-
-       <svg xmlns="http://www.w3.org/2000/svg" class="icon  text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" >
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h6l2 3h10v11H3V7z" />
-              </svg>
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Document
-    </span>
-
-  </a>
-</li>
-       <li class="group relative">
-  <a href="/invoice"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-<svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700 w-5 h-5" fill="none" viewBox="0 0 24 24"
-     stroke="currentColor" stroke-width="2">
-  <path stroke-linecap="round" stroke-linejoin="round"
-        d="M7 3h7l4 4v12a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2z" />
-  <path stroke-linecap="round" stroke-linejoin="round"
-        d="M9 12h6M9 16h6M9 8h3" />
-</svg>
-
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      invoice
-    </span>
-
-  </a>
-</li>
-    
-
-
-          {{-- <li>
-            <a href="/anjas"
-              class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg transition duration-75 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green-700" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M3 8h18M3 12h12m-9 4h3m-6 4h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-
-
-
-            </a>
-          </li> --}}
-    
-       <li class="group relative">
-  <a href="/help"
-     class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-          <svg class="h-5 w-5 2xl:w-6 2xl:h-6 text-red-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke-width="2" stroke="currentColor" class="icon">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 8v4m0 4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
-              </svg>
-
-    <!-- Tooltip: FIXED biar keluar dari overflow -->
-    <span class="fixed left-[70px]  /* sesuaikan biar keluar ke kanan */
-                 bg-white text-green-500 text-sm font-medium
-                 px-3 py-1 rounded-lg shadow-lg whitespace-nowrap
-                 opacity-0 group-hover:opacity-100 transition-opacity
-                 pointer-events-none">
-      Bantuan
-    </span>
-
-  </a>
-</li>
-      
-  
-        </ul>
-    
-
-      </div>
-
-    </aside>
-    <main data-aos="fade-left" class="p-4 mt-5 pt-20 lg:ml-20">
-
-      {{ $slot }}
-    </main>
     <div id="lapor-modal" tabindex="-1" aria-hidden="true"
       class="hidden overflow-y-auto overflow-x-hidden fixed inset-0 z-[9999] justify-center items-center">
       <div class="relative p-4 w-full max-w-md max-h-full">
@@ -825,7 +673,310 @@ function closeModalPengeluaran() {
     document.getElementById('modalPengeluaran').classList.add('hidden');
 }
 </script>
+{{-- script calendar --}}
+<script>
+  // Data dummy versi perusahaan & pribadi
+  let eventsData = {
+    company: [
+      { id: 1, title: "Meeting Jordan", location: "Finansial", start: 8, end: 9, day: 1, desc: "Diskusi keuangan Q1", color: "bg-blue-400" },
+      { id: 2, title: "Meeting Raudra", location: "Properti", start: 8, end: 9, day: 3, desc: "Update proyek", color: "bg-green-400" },
+      { id: 3, title: "Meeting Steven", location: "Hukum", start: 9, end: 10, day: 5, desc: "Review kontrak", color: "bg-purple-400" },
+      { id: 4, title: "Meeting Khalid", location: "Merger", start: 8, end: 9, day: 4, desc: "Diskusi merger", color: "bg-red-400" }
+    ],
+    personal: [
+      { id: 101, title: "Dokter", location: "Klinik", start: 9, end: 10, day: 2, desc: "Check-up tahunan", color: "bg-purple-400" },
+      { id: 102, title: "Gym", location: "Fitness Center", start: 7, end: 8, day: 4, desc: "Latihan rutin", color: "bg-green-400" },
+      { id: 103, title: "Kumpul Keluarga", location: "Rumah", start: 11, end: 13, day: 6, desc: "Makan malam bersama", color: "bg-red-400" }
+    ]
+  };
 
+  const SLOT_HEIGHT = 64;
+  const daysShort = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  const monthNames = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
+
+  let currentVersion = 'company';
+  let currentYear = new Date().getFullYear();
+  let currentMonth = new Date().getMonth();
+  let currentWeekNumber = 1;
+
+  // Dapatkan tanggal awal minggu ke-n di bulan dan tahun tertentu
+  function getFirstDateOfWeek(year, month, weekNum) {
+    let firstDayOfMonth = new Date(year, month, 1);
+    let firstDayWeekday = firstDayOfMonth.getDay();
+    let firstSunday = new Date(firstDayOfMonth);
+    firstSunday.setDate(firstDayOfMonth.getDate() - firstDayWeekday);
+    let result = new Date(firstSunday);
+    result.setDate(firstSunday.getDate() + 7 * (weekNum - 1));
+    return result;
+  }
+
+  // Update header
+  function updateHeader() {
+    document.getElementById('monthYearBtn').textContent = `${monthNames[currentMonth]} ${currentYear}`;
+    document.getElementById('weekLabel').textContent = `Minggu ${currentWeekNumber}`;
+    let firstDateOfWeek = getFirstDateOfWeek(currentYear, currentMonth, currentWeekNumber);
+    for(let i = 0; i < 7; i++) {
+      let dt = new Date(firstDateOfWeek);
+      dt.setDate(firstDateOfWeek.getDate() + i);
+      let headerEl = document.getElementById(`header${daysShort[i]}`);
+      if(headerEl) {
+        let dateNum = dt.getDate();
+        headerEl.textContent = `${daysShort[i]} ${dateNum}`;
+        const now = new Date();
+        if(dt.toDateString() === now.toDateString()) {
+          headerEl.classList.add("bg-green-500", "text-white", "rounded-md");
+        } else {
+          headerEl.classList.remove("bg-green-500", "text-white", "rounded-md");
+        }
+      }
+    }
+  }
+
+  // Render event ke kalender
+  function renderEvents() {
+    for(let i=0; i<7; i++) {
+      const col = document.getElementById(`day-${i}`);
+      col.innerHTML = '';
+      for(let h=6; h<16; h++) {
+        const slot = document.createElement('div');
+        slot.className = "border-b border-gray-200 slot-height relative";
+        col.appendChild(slot);
+      }
+    }
+    let firstDateOfWeek = getFirstDateOfWeek(currentYear, currentMonth, currentWeekNumber);
+    if(!eventsData[currentVersion]) return;
+    eventsData[currentVersion].forEach(ev => {
+      if(ev.day < 0 || ev.day > 6) return;
+      let eventDate = new Date(firstDateOfWeek);
+      eventDate.setDate(firstDateOfWeek.getDate() + ev.day);
+      if(eventDate.getMonth() !== currentMonth) return;
+      const col = document.getElementById(`day-${ev.day}`);
+      if(!col) return;
+      const top = (ev.start - 6) * SLOT_HEIGHT;
+      const height = (ev.end - ev.start) * SLOT_HEIGHT;
+      const eventBox = document.createElement('div');
+      eventBox.className = `event-box ${ev.color}`;
+      eventBox.style.top = `${top}px`;
+      eventBox.style.height = `${height - 4}px`;
+      eventBox.textContent = ev.title;
+      eventBox.title = ev.title;
+      eventBox.addEventListener('click', () => showEventDetail(ev, eventDate));
+      col.appendChild(eventBox);
+    });
+  }
+
+  // Tampilkan detail event
+  function showEventDetail(ev, eventDate) {
+    document.getElementById('detailTitle').textContent = ev.title;
+    document.getElementById('detailLocation').textContent = ev.location;
+    document.getElementById('detailTime').textContent = `${ev.start}:00 - ${ev.end}:00, ${eventDate.toLocaleDateString('id-ID', { weekday:'long', day:'numeric', month:'long', year:'numeric' })}`;
+    document.getElementById('detailDescription').textContent = ev.desc || "-";
+    document.getElementById('eventDetail').classList.remove('hidden');
+    window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+  }
+
+  // Dropdown bulan
+  const monthYearBtn = document.getElementById('monthYearBtn');
+  const monthDropdown = document.getElementById('monthDropdown');
+  let dropdownOpen = false;
+  function closeDropdown() {
+    monthDropdown.classList.add('hidden');
+    dropdownOpen = false;
+  }
+  function openDropdown() {
+    monthDropdown.classList.remove('hidden');
+    dropdownOpen = true;
+  }
+  function fillMonthDropdown() {
+    monthDropdown.innerHTML = '';
+    monthNames.forEach((name, i) => {
+      let div = document.createElement('div');
+      div.textContent = name;
+      if(i === currentMonth) {
+        div.classList.add('font-semibold', 'text-green-700');
+      }
+      div.addEventListener('click', () => {
+        currentMonth = i;
+        currentWeekNumber = 1;
+        updateHeader();
+        renderEvents();
+        closeDropdown();
+      });
+      monthDropdown.appendChild(div);
+    });
+  }
+  monthYearBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if(dropdownOpen) closeDropdown();
+    else {
+      fillMonthDropdown();
+      openDropdown();
+    }
+  });
+  document.addEventListener('click', () => {
+    if(dropdownOpen) closeDropdown();
+  });
+
+  // Navigasi minggu
+  document.getElementById('prevWeekBtn').addEventListener('click', () => {
+    if(currentWeekNumber > 1) {
+      currentWeekNumber--;
+      updateHeader();
+      renderEvents();
+      document.getElementById('eventDetail').classList.add('hidden');
+    }
+  });
+  document.getElementById('nextWeekBtn').addEventListener('click', () => {
+    const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const firstDayWeekday = new Date(currentYear, currentMonth, 1).getDay();
+    const totalSlots = daysInMonth + firstDayWeekday;
+    const maxWeek = Math.ceil(totalSlots / 7);
+    if(currentWeekNumber < maxWeek) {
+      currentWeekNumber++;
+      updateHeader();
+      renderEvents();
+      document.getElementById('eventDetail').classList.add('hidden');
+    }
+  });
+
+  // Switch versi kalender
+  document.querySelectorAll('input[name="version"]').forEach(radio => {
+    radio.addEventListener('change', e => {
+      currentVersion = e.target.value;
+      renderEvents();
+      document.getElementById('eventDetail').classList.add('hidden');
+    });
+  });
+
+  // Mini Calendar
+  const miniCalendarContainer = document.getElementById('miniCalendar');
+  let miniCalDate = new Date();
+
+  function renderMiniCalendar() {
+    miniCalendarContainer.innerHTML = '';
+    const year = miniCalDate.getFullYear();
+    const month = miniCalDate.getMonth();
+    const monthYear = document.createElement('div');
+    monthYear.className = "flex justify-between items-center mb-2";
+    monthYear.innerHTML = `
+      <button id="prevMiniMonth" class="font-bold px-2 py-1 hover:bg-green-200 rounded">&lt;</button>
+      <span class="font-semibold">${monthNames[month]} ${year}</span>
+      <button id="nextMiniMonth" class="font-bold px-2 py-1 hover:bg-green-200 rounded">&gt;</button>
+    `;
+    miniCalendarContainer.appendChild(monthYear);
+
+    const daysRow = document.createElement('table');
+    daysRow.className = "table-fixed w-full text-sm text-center border-collapse";
+    const thead = document.createElement('thead');
+    const tr = document.createElement('tr');
+    ["Su","Mo","Tu","We","Th","Fr","Sa"].forEach(d => {
+      const th = document.createElement('th');
+      th.textContent = d;
+      tr.appendChild(th);
+    });
+    thead.appendChild(tr);
+    daysRow.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    let firstDay = new Date(year, month, 1);
+    let lastDay = new Date(year, month + 1, 0);
+    let daysInMonth = lastDay.getDate();
+    let startDay = firstDay.getDay();
+
+    let dayCount = 1;
+    for(let week=0; week<6; week++) {
+      const trBody = document.createElement('tr');
+      for(let d=0; d<7; d++) {
+        const td = document.createElement('td');
+        if(week === 0 && d < startDay) {
+          td.textContent = '';
+        } else if(dayCount > daysInMonth) {
+          td.textContent = '';
+        } else {
+          td.textContent = dayCount;
+          const today = new Date();
+          if(dayCount === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+            td.classList.add('today');
+          }
+          td.addEventListener('click', () => {
+            currentYear = year;
+            currentMonth = month;
+            currentWeekNumber = Math.floor((dayCount + startDay - 1) / 7) + 1;
+            updateHeader();
+            renderEvents();
+          });
+          dayCount++;
+        }
+        trBody.appendChild(td);
+      }
+      tbody.appendChild(trBody);
+    }
+    daysRow.appendChild(tbody);
+    miniCalendarContainer.appendChild(daysRow);
+
+    document.getElementById('prevMiniMonth').onclick = () => {
+      miniCalDate.setMonth(miniCalDate.getMonth() - 1);
+      renderMiniCalendar();
+    };
+    document.getElementById('nextMiniMonth').onclick = () => {
+      miniCalDate.setMonth(miniCalDate.getMonth() + 1);
+      renderMiniCalendar();
+    };
+  }
+
+  // Modal add event
+  const modal = document.getElementById('modalAddEvent');
+  const btnAdd = document.getElementById('btnAddEvent');
+  const btnCancel = document.getElementById('btnCancel');
+  const formAdd = document.getElementById('formAddEvent');
+
+  btnAdd.onclick = () => {
+    modal.classList.remove('hidden');
+    formAdd.reset();
+  };
+  btnCancel.onclick = () => {
+    modal.classList.add('hidden');
+  };
+  modal.onclick = e => {
+    if(e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  };
+  formAdd.onsubmit = e => {
+    e.preventDefault();
+    const formData = new FormData(formAdd);
+    const day = parseInt(formData.get('day'));
+    const start = parseInt(formData.get('start'));
+    const end = parseInt(formData.get('end'));
+    const title = formData.get('title').trim();
+    const location = formData.get('location').trim();
+    const desc = formData.get('desc').trim();
+
+    if(isNaN(day) || isNaN(start) || isNaN(end) || !title) {
+      alert("Mohon isi semua dengan benar.");
+      return;
+    }
+    if(start < 6 || end > 15 || start >= end) {
+      alert("Jam mulai harus lebih kecil dari jam selesai dan dalam rentang 6-15.");
+      return;
+    }
+
+    const newId = Date.now();
+    const colors = ["bg-blue-400","bg-green-400","bg-purple-400","bg-red-400"];
+    const randColor = colors[Math.floor(Math.random() * colors.length)];
+
+    const newEvent = { id: newId, day, start, end, title, location, desc, color: randColor };
+    eventsData[currentVersion].push(newEvent);
+    renderEvents();
+    modal.classList.add('hidden');
+    alert("Kegiatan berhasil ditambahkan!");
+  };
+
+  // Inisialisasi awal
+  updateHeader();
+  renderEvents();
+  renderMiniCalendar();
+</script>
 </body>
 
 </html>
