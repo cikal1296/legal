@@ -537,7 +537,7 @@ setInterval(updateWaktu, 60000);
 
   sidebar.addEventListener('mouseenter', () => {
     sidebar.classList.remove('w-12');
-    sidebar.classList.add('w-56');
+    sidebar.classList.add('w-48');
     sidebar.querySelectorAll('span').forEach(span => {
       span.classList.remove('opacity-0','w-0','overflow-hidden');
       span.classList.add('opacity-100','w-auto','overflow-visible');
@@ -546,7 +546,7 @@ setInterval(updateWaktu, 60000);
   });
 
   sidebar.addEventListener('mouseleave', () => {
-    sidebar.classList.remove('w-56');
+    sidebar.classList.remove('w-48');
     sidebar.classList.add('w-12');
     sidebar.querySelectorAll('span').forEach(span => {
       span.classList.add('opacity-0','w-0','overflow-hidden');
