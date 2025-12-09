@@ -60,69 +60,16 @@
                         <button class="px-2 py-1 rounded-md bg-gray-200 hover:bg-gray-300 text-xs">Edit</button>
                     </td>
                     <td class="px-4 py-3">📄</td>
-                    <td class="px-4 py-3 font-medium">Red billet pesawat ke Batam</td>
-                    <td class="px-4 py-3">#1823702 - Jordan • Finansial</td>
-                    <td class="px-4 py-3">1</td>
-                    <td class="px-4 py-3 font-semibold">IDR 500.000</td>
-                    <td class="px-4 py-3">04 - 11 - 2024</td>
+                    <td class="px-4 py-3 font-medium">Kosong</td>
+                    <td class="px-4 py-3">#000000 - #### • #####</td>
+                    <td class="px-4 py-3">0</td>
+                    <td class="px-4 py-3 font-semibold">IDR 000.000</td>
+                    <td class="px-4 py-3">00 - 00 - 0000</td>
                     <td class="px-4 py-3">N/A</td>
                 </tr>
 
                 <!-- ROW 2 -->
-                <tr class="border-b hover:bg-gray-50">
-                    <td class="px-4 py-3">
-                        <button class="px-2 py-1 rounded-md bg-gray-200 hover:bg-gray-300 text-xs">Edit</button>
-                    </td>
-                    <td class="px-4 py-3">📄</td>
-                    <td class="px-4 py-3 font-medium">Belibahan operasional</td>
-                    <td class="px-4 py-3">#1933702 - Prod. Properti</td>
-                    <td class="px-4 py-3">3</td>
-                    <td class="px-4 py-3 font-semibold">IDR 150.000</td>
-                    <td class="px-4 py-3">06 - 11 - 2024</td>
-                    <td class="px-4 py-3">N/A</td>
-                </tr>
-
-                <!-- ROW 3 -->
-                <tr class="border-b hover:bg-gray-50">
-                    <td class="px-4 py-3">
-                        <button class="px-2 py-1 rounded-md bg-gray-200 hover:bg-gray-300 text-xs">Edit</button>
-                    </td>
-                    <td class="px-4 py-3">📄</td>
-                    <td class="px-4 py-3 font-medium">Biaya Operasional</td>
-                    <td class="px-4 py-3">#1623702 - Josephy • Litigasi</td>
-                    <td class="px-4 py-3">12</td>
-                    <td class="px-4 py-3 font-semibold">IDR 350.000</td>
-                    <td class="px-4 py-3">07 - 11 - 2024</td>
-                    <td class="px-4 py-3">N/A</td>
-                </tr>
-
-                <!-- ROW 4 -->
-                <tr class="border-b hover:bg-gray-50">
-                    <td class="px-4 py-3">
-                        <button class="px-2 py-1 rounded-md bg-gray-200 hover:bg-gray-300 text-xs">Edit</button>
-                    </td>
-                    <td class="px-4 py-3">📄</td>
-                    <td class="px-4 py-3 font-medium">Biaya Operasional</td>
-                    <td class="px-4 py-3">#1823702 - Karno • Warga</td>
-                    <td class="px-4 py-3">20</td>
-                    <td class="px-4 py-3 font-semibold">IDR 900.000</td>
-                    <td class="px-4 py-3">08 - 11 - 2024</td>
-                    <td class="px-4 py-3">N/A</td>
-                </tr>
-
-                <!-- ROW 5 -->
-                <tr class="border-b hover:bg-gray-50">
-                    <td class="px-4 py-3">
-                        <button class="px-2 py-1 rounded-md bg-gray-200 hover:bg-gray-300 text-xs">Edit</button>
-                    </td>
-                    <td class="px-4 py-3">📄</td>
-                    <td class="px-4 py-3 font-medium">Konsultasi vendor</td>
-                    <td class="px-4 py-3">#1823702 - Devy • Manajemen</td>
-                    <td class="px-4 py-3">5</td>
-                    <td class="px-4 py-3 font-semibold">IDR 650.000</td>
-                    <td class="px-4 py-3">10 - 11 - 2024</td>
-                    <td class="px-4 py-3">N/A</td>
-                </tr>
+              
 
             </tbody>
         </table>

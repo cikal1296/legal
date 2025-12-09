@@ -163,36 +163,34 @@ function taskApp(){
     return {
         tasks: [
             {
-    title:"#1923702 - Paudra Sanjaya : Properti",
-    files:5,
+    title:"#0000000 - ###### #### : Properti",
+    files:0,
     owner:"👤👤",
-    status:"Dikerjakan",
+    status:"Kosong",
     statusColor:"bg-yellow-500",
-    priority:"Tinggi",
+    priority:"Null",
     priorityColor:"bg-purple-700",
-    limit:"10–12 Des",
-    deadline:"12 Mar",
-    updated:"05–11–2024",
+    limit:"None",
+    deadline:"None",
+    updated:"00-00-0000",
     subtasks:[
-        {title:"#1923702 - Pelaporan Klien",files:1,owner:"👤",status:"Selesai",statusColor:"bg-green-500",priority:"Sedang",priorityColor:"bg-purple-500",limit:"10–12 Des",deadline:"12 Mar",updated:"05–11–2024"},
+        {title:"#00000 - Pelaporan Klien",files:0,owner:" ",status:"Kosong",statusColor:"bg-green-500",priority:"Null",priorityColor:"bg-purple-500",limit:"10–12 Des",deadline:"Null",updated:"NUll"},
     ],
     showSub:true
 }
 ,
-            {
-                title:"#1823702 - Jordan Yudhistira : Finansial",
-                files:8,
-                owner:"👤👤👤",
-                status:"Selesai",
-                statusColor:"bg-green-500",
-                priority:"Sedang",
-                priorityColor:"bg-purple-500",
-                limit:"6–7 Des",
-                deadline:"7 Mar",
-                updated:"04–11–2024",
+            {title:"#0000000 - ###### #### : Properti",
+    files:0,
+    owner:"👤👤",
+    status:"Kosong",
+    statusColor:"bg-yellow-500",
+    priority:"Null",
+    priorityColor:"bg-purple-700",
+    limit:"None",
+    deadline:"None",
+    updated:"00-00-0000",
                 subtasks:[
-                    {title:"Pencarian Sumber Hukum",files:2,owner:"👤👤",status:"Ditunda",statusColor:"bg-red-500",priority:"Rendah",priorityColor:"bg-blue-300",limit:"6–7 Des",deadline:"7 Mar",updated:"06–11–2024"},
-                    {title:"Pencarian Data Relevan",files:1,owner:"👤👤",status:"Ditunda",statusColor:"bg-red-500",priority:"Rendah",priorityColor:"bg-blue-300",limit:"6–7 Des",deadline:"7 Mar",updated:"06–11–2024"},
+                    {title:"#00000 - Pelaporan Klien",files:0,owner:" ",status:"Kosong",statusColor:"bg-green-500",priority:"Null",priorityColor:"bg-purple-500",limit:"10–12 Des",deadline:"Null",updated:"NUll"},
                 ],
                 showSub:true
             }

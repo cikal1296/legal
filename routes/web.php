@@ -4,8 +4,14 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
+
+
 Route::get('/invoice', function () {
     return view('invoice');
+});
+Route::get('/anj', function () {
+    return view('anj');
 });
 
 Route::get('/', function () {

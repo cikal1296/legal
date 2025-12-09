@@ -2,17 +2,17 @@
     <div x-data="clientDetail()" class="p-6 2xl:p-8 space-y-6 2xl:space-y-8">
 
         <!-- HEADER ATAS (fix: badge Klien nempel ke nama, bukan jauh di kanan) -->
-        <div class="flex items-start gap-3 2xl:gap-5">
+        <div class="flex items-start gap-3 2xl:gap-5 bg-white shadow-md rounded-xl p-4">
 
             <!-- Avatar bulat -->
 
-            <a href="/statistik" class="text-5xl -mt-1 text-blue-700">&lt;</a>
+            <a href="/statistik" class="text-2xl -mt-1 text-black   ">&lt;</a>
 
-            <div
-                class="w-10 h-10 2xl:w-12 2xl:h-12 rounded-full bg-blue-600 flex items-center justify-center text-white text-lg 2xl:text-xl font-semibold">
-                PS
-            </div>
-
+           <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 64 64" role="img" aria-label="User icon">
+  <circle cx="32" cy="32" r="30" fill="white" stroke="#2563EB" stroke-width="4"/>
+  <circle cx="32" cy="22.5" r="7.5" fill="#2563EB"/>
+  <path d="M16 46c2.5-7 9-11 16-11s13.5 4 16 11" fill="none" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
             <div class="flex flex-col">
 
                 <!-- Nama + Badge Klien (sejajar & rapet) -->
@@ -69,12 +69,19 @@
 
                     <div class="text-sm 2xl:text-base space-y-1 2xl:space-y-2">
                         <p><span class="font-medium">Nama:</span> Paudra Sanjaya</p>
+                        <hr class="pt-1 pb-1">
                         <p><span class="font-medium">Tanggal Lahir:</span> 04-08-1990</p>
+                        <hr class="pt-1 pb-1">
                         <p><span class="font-medium">Jenis Kelamin:</span> Pria</p>
+                        <hr class="pt-1 pb-1">
                         <p><span class="font-medium">NIK:</span> 0868651151718</p>
+                        <hr class="pt-1 pb-1">
                         <p><span class="font-medium">No.Telp:</span> 081635282289</p>
+                        <hr class="pt-1 pb-1">
                         <p><span class="font-medium">Email:</span> PaudraSanjaya@gmail.com</p>
+                        <hr class="pt-1 pb-1">
                         <p><span class="font-medium">Alamat:</span> Jl Cimahi, Bandung</p>
+                        <hr class="pt-1 pb-1">
                     </div>
 
                     <div class="mt-3 2xl:mt-5">

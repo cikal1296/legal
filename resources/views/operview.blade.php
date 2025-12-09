@@ -22,13 +22,17 @@
 
                     <p class="text-2xl text-gray-600">
                         Welcome, cikal muhamad fazri
+                       
+
+
+
                     </p>
                 </div>
 
             </div>
         </div>
 
-        <p class="pl-[87%] text-green-700 ">Personal</p>
+        <p class="pl-[87%] text-green-700 ">Personal  </p>
         <div class="w-[100%] flex items-center justify-center">
        <div class="relative w-[90%] mb-5">
     <div class="border-t border-gray-400"></div>
@@ -104,20 +108,21 @@
                             <div class="space-y-2">
 
                                 <div class="flex gap-2">
+                                    
                                     <div class="w-1 bg-blue-400 rounded"></div>
                                     <div>
-                                        <p class="text-sm text-gray-700">Kickoff Sistem Legal AI — Automasi Draft
-                                            Contract</p>
-                                        <p class="text-xs text-gray-500">08:30 - 09:15</p>
+                                        x
+
+                                        <p class="text-xs text-gray-500">00:00 - 09:00</p>
+                                   
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="flex gap-2">
                                     <div class="w-1 bg-blue-400 rounded"></div>
                                     <div>
-                                        <p class="text-sm text-gray-700">Pembahasan Integrasi e-Signature API &
-                                            Compliance</p>
-                                        <p class="text-xs text-gray-500">10:00 - 11:00</p>
+                                        <p class="text-sm text-gray-700"></p>
+                                        <p class="text-xs text-gray-500">00:00 - 00:00</p>
                                     </div>
                                 </div>
 
@@ -125,9 +130,8 @@
                                 <div class="flex gap-2">
                                     <div class="w-1 bg-blue-400 rounded"></div>
                                     <div>
-                                        <p class="text-sm text-gray-700">Sesi Uji Coba OCR untuk Due Diligence
-                                            Automation</p>
-                                        <p class="text-xs text-gray-500">13:00 - 14:30</p>
+                                        <p class="text-sm text-gray-700"></p>
+                                        <p class="text-xs text-gray-500">00:00 - 00:00</p>
                                     </div>
                                 </div>
 
@@ -135,9 +139,8 @@
                                 <div class="flex gap-2">
                                     <div class="w-1 bg-blue-400 rounded"></div>
                                     <div>
-                                        <p class="text-sm text-gray-700">Evaluasi Sistem e-Litigation & Workflow
-                                            Monitoring</p>
-                                        <p class="text-xs text-gray-500">15:00 - 16:00</p>
+                                        <p class="text-sm text-gray-700"></p>
+                                        <p class="text-xs text-gray-500">00:00 - 00:00</p>
                                     </div>
                                 </div>
 
@@ -146,7 +149,7 @@
                         </div>
 
                         <!-- GARIS TENGAH -->
-                        <div class="hidden lg:block border-l-4  border-green-500"></div>
+                        <div class="hidden lg:block border-l-4 h-[220px] top-15 bottom-10  border-green-500"></div>
 
                         <!-- TASKS -->
                         <div class="flex-1">
@@ -164,18 +167,17 @@
                                 <div class="flex gap-2">
                                     <div class="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
                                     <div>
-                                        <p class="text-sm text-gray-700">Finalisasi clause liability untuk kontrak
-                                            fintech</p>
-                                        <p class="text-xs text-gray-500">Due: Hari ini, 13:00</p>
+                                        <p class="text-sm text-gray-700"></p>
+                                        <p class="text-xs text-gray-500">00:00 - 00:00</p>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="flex gap-2">
                                     <div class="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
                                     <div>
-                                        <p class="text-sm text-gray-700">Perbaikan workflow e-Contract berdasarkan audit
+                                        <p class="text-sm text-gray-700">
                                         </p>
-                                        <p class="text-xs text-gray-500">Due: Besok</p>
+                                        <p class="text-xs text-gray-500">00:00 - 00:00</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -183,8 +185,8 @@
                                 <div class="flex gap-2">
                                     <div class="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
                                     <div>
-                                        <p class="text-sm text-gray-700">Checklist compliance untuk modul AI review</p>
-                                        <p class="text-xs text-gray-500">Due: 2 Hari lagi</p>
+                                        <p class="text-sm text-gray-700"></p>
+                                        <p class="text-xs text-gray-500">00:00 - 00:00</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -192,9 +194,9 @@
                                 <div class="flex gap-2">
                                     <div class="w-2 h-2 bg-green-500 rounded-full mt-1"></div>
                                     <div>
-                                        <p class="text-sm text-gray-700">Testing integrasi OCR ke dashboard litigation
+                                        <p class="text-sm text-gray-700">
                                         </p>
-                                        <p class="text-xs text-gray-500">Due: Minggu ini</p>
+                                        <p class="text-xs text-gray-500">00:00 - 00:00</p>
                                     </div>
                                 </div>
                                 <hr>
@@ -204,11 +206,7 @@
                     </div>
 
                 </div>
-
-
-
-
-                <!-- ================== ROW 2 — ID + INVOICE + PEKERJAAN + CALENDAR ================== -->
+    <!-- ================== ROW 2 — ID + INVOICE + PEKERJAAN + CALENDAR ================== -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 2xl:gap-7">
 
                     <!-- ========== ID CARD ========== -->
@@ -220,19 +218,24 @@
                         <div class="border-t-2 border-teal-500 w-full mb-4 2xl:mb-5"></div>
 
                         <div class="flex items-center gap-4 2xl:gap-5 mb-4 2xl:mb-5">
-                            <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/2c35cef9c38283f8478d1e808b1c129f371e50b3-616x822.png"
+                            <img src="
+https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/05e1a996814dd10d7179efee327d29a7be00e912-616x822.png?auto=format&fit=fill&q=80&w=290                            "
                                 class="w-16 h-16 2xl:w-17 2xl:h-17 rounded-xl object-cover shadow" />
 
                             <div>
-                                <p class="font-semibold text-gray-900 2xl:text-lg">Nicholas Suardi</p>
-                                <p class="text-sm 2xl:text-base text-gray-500">Partner</p>
+                                <p class="font-semibold text-gray-900 2xl:text-lg"></p>
+                                <p class="text-sm 2xl:text-base text-gray-500"></p>
                             </div>
                         </div>
-
-                        <p class="text-sm 2xl:text-base text-gray-700"><b>Permissions:</b> Administrator</p>
-                        <p class="text-sm 2xl:text-base text-gray-700"><b>Email:</b> nicholassuardi@gmail.com</p>
-                        <p class="text-sm 2xl:text-base text-gray-700"><b>No. Telp:</b> 081344557789</p>
-                        <p class="text-sm 2xl:text-base text-gray-700"><b>Rate Per Jam:</b> Rp 5.000.000</p>
+                        
+                        <p class="text-sm pb-1 2xl:text-base text-gray-700"><b>Permissions:</b> Administrator</p>
+                        <hr class="pb-1">
+                        <p class="text-sm pb-1 2xl:text-base text-gray-700"><b>Email:</b> xxxxxx@gmail.com</p>
+                        <hr class="pb-1">
+                        <p class="text-sm pb-1 2xl:text-base text-gray-700"><b>No. Telp:</b> 081344557789</p>
+                        <hr class="pb-1">
+                        <p class="text-sm pb-1 2xl:text-base text-gray-700"><b>Rate Per Jam:</b> Rp 0.000.000</p>
+                        <hr class="pb-1">
                         <div class="mt-3">
                             <label class="text-sm font-medium">Catatan :</label>
                             <textarea rows="3" class="w-full border rounded-lg mt-1"></textarea>
@@ -249,22 +252,22 @@
                             <!-- Draft -->
                             <div class="pl-3 2xl:pl-4 border-l-4 border-blue-500">
                                 <p class="text-gray-500 2xl:text-base">Draft</p>
-                                <p class="text-2xl 2xl:text-3xl font-semibold text-blue-600">3</p>
-                                <p class="text-gray-700 2xl:text-lg">Nilai Invoice <b>Rp 500.000.000</b></p>
+                                <p class="text-2xl 2xl:text-3xl font-semibold text-blue-600">0</p>
+                                <p class="text-gray-700 2xl:text-lg">Nilai Invoice <b>Rp 000.000.000</b></p>
                             </div>
 
                             <!-- Belum dibayar -->
                             <div class="pl-3 2xl:pl-4 border-l-4 border-red-500">
                                 <p class="text-gray-500 2xl:text-base">Belum dibayar</p>
-                                <p class="text-2xl 2xl:text-3xl font-semibold text-red-600">3</p>
-                                <p class="text-gray-700 2xl:text-lg">Nilai Invoice <b>Rp 100.000.000</b></p>
+                                <p class="text-2xl 2xl:text-3xl font-semibold text-red-600">0</p>
+                                <p class="text-gray-700 2xl:text-lg">Nilai Invoice <b>Rp 000.000.000</b></p>
                             </div>
 
                             <!-- Sudah dibayar -->
                             <div class="pl-3 2xl:pl-4 border-l-4 border-green-500">
                                 <p class="text-gray-500 2xl:text-base">Sudah dibayar</p>
-                                <p class="text-2xl 2xl:text-3xl font-semibold text-green-600">30</p>
-                                <p class="text-gray-700 2xl:text-lg">Nilai Faktur <b>Rp 5.430.000.000</b></p>
+                                <p class="text-2xl 2xl:text-3xl font-semibold text-green-600">0</p>
+                                <p class="text-gray-700 2xl:text-lg">Nilai Faktur <b>Rp 0.000.000.000</b></p>
                             </div>
 
                         </div>
@@ -275,7 +278,7 @@
                         <h3 class="text-xl 2xl:text-2xl font-semibold mb-2 2xl:mb-3">Pekerjaan</h3>
 
                         <div class="pl-3 2xl:pl-4 border-l-4 border-cyan-400">
-                            <p class="font-medium 2xl:text-lg">0001 – Benjamin : Wanprestasi</p>
+                            <p class="font-medium 2xl:text-lg">0000 – --- : ---</p>
 
                             <span
                                 class="mt-2 2xl:mt-3 inline-block bg-green-100 text-green-700 text-xs 2xl:text-sm px-3 py-1 rounded-full">
@@ -283,9 +286,9 @@
                             </span>
 
                             <div class="mt-3 2xl:mt-4 space-y-1 2xl:space-y-2 text-sm 2xl:text-base">
-                                <p>Dana deposit: <b>Rp 50.000.000</b></p>
-                                <p>Sisa tagihan: <b>Rp 3.000.000</b></p>
-                                <p>Total semua biaya: <b>Rp 20.000.000</b></p>
+                                <p>Dana deposit: <b>Rp 00.000.000</b></p>
+                                <p>Sisa tagihan: <b>Rp 0.000.000</b></p>
+                                <p>Total semua biaya: <b>Rp00.000.000</b></p>
                             </div>
                         </div>
 
@@ -293,9 +296,9 @@
 
 
                             <div class="mt-3 2xl:mt-4 space-y-1 2xl:space-y-2 text-sm 2xl:text-base">
-                                <p>Dana deposit: <b>Rp 50.000.000</b></p>
-                                <p>Sisa tagihan: <b>Rp 3.000.000</b></p>
-                                <p>Total semua biaya: <b>Rp 20.000.000</b></p>
+                                <p>Dana deposit: <b>Rp 00.000.000</b></p>
+                                <p>Sisa tagihan: <b>Rp 0.000.000</b></p>
+                                <p>Total semua biaya: <b>Rp 00.000.000</b></p>
                             </div>
                         </div>
                     </div>
@@ -353,7 +356,7 @@
 
                         <!-- Header task -->
                         <div class="flex justify-between items-center">
-                            <h3 class="font-semibold text-gray-800 text-inherit">Matter</h3>
+                            <h3 class="font-semibold text-gray-800 text-inherit">Task</h3>
                             <button class="text-green-700 hover:text-green-800 font-medium text-inherit">Show
                                 more</button>
                         </div>
@@ -361,22 +364,16 @@
                         <!-- Task item -->
                         <div class="flex items-start gap-3">
                             <div class="flex-shrink-0 pt-6">
-                                <svg class="icon text-green-700 flex-shrink-0 w-[1em] h-[1em]" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 3v18m0-18l6 6m-6-6L6 9m9 12H9m9-9h-6m-6 0h6" />
-                                </svg>
+                          
                             </div>
                             <p class="text-gray-700 text-inherit">
-                                Annisa Donna S.H telah menambahkan anda dalam
-                                <span class="font-medium">Pekerjaan 25030002 - SMAN 1 Bandung</span>
+                                <span class="font-medium"></span>
                             </p>
                         </div>
 
-                        <hr class="border-gray-200">
 
                         <!-- Duplikat task -->
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-between items-center pt-24">
                             <h3 class="font-semibold text-gray-800 text-inherit">Matter</h3>
                             <button class="text-green-700 hover:text-green-800 font-medium text-inherit">Show
                                 more</button>
@@ -384,15 +381,10 @@
 
                         <div class="flex items-start gap-3">
                             <div class="flex-shrink-0 pt-6">
-                                <svg class="icon text-green-700 flex-shrink-0 w-[1em] h-[1em]" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 3v18m0-18l6 6m-6-6L6 9m9 12H9m9-9h-6m-6 0h6" />
-                                </svg>
+                                
                             </div>
                             <p class="text-gray-700 text-inherit">
-                                Annisa Donna S.H telah menambahkan anda dalam
-                                <span class="font-medium">Pekerjaan 25030002 - SMAN 1 Bandung</span>
+                                <span class="font-medium"></span>
                             </p>
                         </div>
 

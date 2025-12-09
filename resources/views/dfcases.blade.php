@@ -1,4 +1,3 @@
-{{-- resources/views/cases/index.blade.php --}}
 <x-utama>
 <div class="p-6 space-y-6 text-gray-700 text-sm">
 
@@ -37,43 +36,18 @@
 
             <tbody class="divide-y text-sm">
                 <tr>
-                    <td class="px-4 py-3">#1823702 - Jordan : Finansial</td>
-                    <td class="px-4 py-3">Jordan Yudhistira</td>
-                    <td class="px-4 py-3">Finansial</td>
+                    <td class="px-4 py-3">#000000 - #### : ####</td>
+                    <td class="px-4 py-3">#### #####</td>
+                    <td class="px-4 py-3">#####</td>
                     <td class="px-4 py-3">
                         <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-medium">Terbuka</span>
                     </td>
-                    <td class="px-4 py-3">04 - 15 - 2024</td>
+                    <td class="px-4 py-3">00 - 00 - 0000</td>
                     <td class="px-4 py-3">
                         <a href="/cases" class="px-3 py-1 bg-teal-500 text-white rounded text-xs">Detail</a>
                     </td>
                 </tr>
 
-                <tr>
-                    <td class="px-4 py-3">#1823703 - Alya : Properti</td>
-                    <td class="px-4 py-3">Alya Permata</td>
-                    <td class="px-4 py-3">Properti</td>
-                    <td class="px-4 py-3">
-                        <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-medium">Pending</span>
-                    </td>
-                    <td class="px-4 py-3">04 - 18 - 2024</td>
-                    <td class="px-4 py-3">
-                        <a href="/cases" class="px-3 py-1 bg-teal-500 text-white rounded text-xs">Detail</a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="px-4 py-3">#1823704 - Benjamin : Waris</td>
-                    <td class="px-4 py-3">Benjamin Hartono</td>
-                    <td class="px-4 py-3">Waris</td>
-                    <td class="px-4 py-3">
-                        <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-medium">Tertutup</span>
-                    </td>
-                    <td class="px-4 py-3">04 - 20 - 2024</td>
-                    <td class="px-4 py-3">
-                        <a href="/cases" class="px-3 py-1 bg-teal-500 text-white rounded text-xs">Detail</a>
-                    </td>
-                </tr>
 
             </tbody>
         </table>

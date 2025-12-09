@@ -454,14 +454,7 @@ function invoicePage(){
 
         // ========== BASE DATA INVOICES ==========
         invoices: [
-            { id:1, no:'22192892 INV-001', status:'Belum Bayar', jatuh:'7 Mar', klien:'Benjamin', pekerjaan:'#1823702-Jordan : Finansial', tanggal:'04 - 15 - 2024', saldo:0 },
-            { id:2, no:'22192892 INV-002', status:'Lunas', jatuh:'7 Mar', klien:'Agus', pekerjaan:'#1923702-Paudra : Properti', tanggal:'04 - 15 - 2024', saldo:0 },
-            { id:3, no:'22192892 INV-003', status:'Lunas', jatuh:'6 Mar', klien:'Siti', pekerjaan:'#1923703-Alya : Properti', tanggal:'06 - 07 - 2024', saldo:0 },
-            { id:4, no:'22192892 INV-004', status:'Draft', jatuh:'7 Mar', klien:'Dian', pekerjaan:'#2023702-Jesslyn : Lingkungan', tanggal:'04 - 15 - 2024', saldo:3000000 },
-            { id:5, no:'22192892 INV-005', status:'Draft', jatuh:'7 Mar', klien:'Rudi', pekerjaan:'#2123702-Richard : Akuisisi', tanggal:'04 - 15 - 2024', saldo:0 },
-            { id:6, no:'22192892 INV-006', status:'Belum Bayar', jatuh:'7 Mar', klien:'Kusno', pekerjaan:'#2223702-Kusno : Merger', tanggal:'04 - 15 - 2024', saldo:0 },
-            { id:7, no:'22192892 INV-007', status:'Belum Lunas', jatuh:'7 Mar', klien:'Steven', pekerjaan:'#2233702-Steven Diva : Waris', tanggal:'04 - 15 - 2024', saldo:0 },
-            { id:8, no:'22192892 INV-008', status:'Lunas', jatuh:'7 Mar', klien:'Dery', pekerjaan:'#2243702-Dery : Wanprestasi', tanggal:'04 - 15 - 2024', saldo:0 }
+         { id:8, no:'22192892 INV-008', status:'Lunas', jatuh:'7 Mar', klien:'Dery', pekerjaan:'#2243702-Dery : Wanprestasi', tanggal:'04 - 15 - 2024', saldo:0 }
         ]
     }
 }

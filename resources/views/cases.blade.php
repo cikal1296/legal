@@ -1,5 +1,5 @@
 {{-- resources/views/cases/show.blade.php --}}
-<x-utama>
+
 <div x-data="caseDetail()" class="p-4 space-y-6">
 
     <!-- ========================= -->
@@ -21,7 +21,7 @@
             </svg>
 
             <h1 class="text-2xl font-semibold">
-                #1823702 - Jordan Yudhistira : Finansial
+                #Seri Angka - Nama Terkait : Pekerjaan
             </h1>
         </div>
 
@@ -100,14 +100,14 @@
                 <div class="bg-white rounded-xl shadow-sm border overflow-hidden">
                     <div class="bg-gray-100 px-4 py-2 border-b font-semibold">Informasi Pekerjaan</div>
                     <div class="p-4 space-y-3 text-sm">
-                        <div><p><strong>Ranah Kasus :</strong> Perdata</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Jenis Kasus :</strong> Finansial</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Lokasi :</strong> Jln. Batununggal No. 5, Bandung, Jawa Barat 19287</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Pimpinan :</strong> James Ardy, Jordan, Gabriella</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Anggota :</strong> James Ardy</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Litigasi / Non Litigasi :</strong> James, Jordan, Gabriella</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Status :</strong> Terbuka</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Deskripsi :</strong> Kasus ini melibatkan sengketa...</p></div>
+                        <div><p><strong>Ranah Kasus :</strong> </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>Jenis Kasus :</strong> </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>Lokasi :</strong> </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>Pimpinan :</strong>  , , </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>Anggota :</strong>  </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong> /   :</strong> , , </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>Status :</strong> </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>Deskripsi :</strong>    ...</p></div>
                     </div>
                 </div>
 
@@ -123,10 +123,10 @@
                 <div class="bg-white rounded-xl shadow-sm border overflow-hidden mt-12">
                     <div class="bg-gray-100 px-4 py-2 border-b font-semibold">Informasi Klien</div>
                     <div class="p-4 space-y-3 text-sm">
-                        <div><p><strong>Nama :</strong> Jordan Yudhistira</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Tanggal Lahir :</strong> 10-11-1999</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>Jenis Kelamin :</strong> Pria</p><hr class="mt-1 border-gray-200"></div>
-                        <div><p><strong>NIK :</strong> 357183783410004</p></div>
+                        <div><p><strong>Nama :</strong>  </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>Tanggal Lahir :</strong> --</p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>Jenis Kelamin :</strong> </p><hr class="mt-1 border-gray-200"></div>
+                        <div><p><strong>NIK :</strong> </p></div>
                     </div>
                 </div>
                 </div>
@@ -416,7 +416,7 @@ function caseDetail(){
         dates: { start: '', end: '', pending: '' },
 
         // finansial
-        flatFee: 100000000,
+        flatFee: 000000000,
         timeEntries: [], // {hours, rate, note, total}
         expenses: [], // {amount, note}
         deposit: 0,
@@ -424,40 +424,40 @@ function caseDetail(){
 
         // transactions & journal
         transactions: [
-            { id: 'TRX-001', date: '2024-04-15', note: 'Pembayaran DP', amount: 2000000 },
+            { id: 'TRX-001', date: '2024-04-15', note: 'Pembayaran DP', amount: 000000 },
         ],
         journal: [
-            { id:1, date:'2024-04-15', category:'Biaya Admin', desc:'Biaya materai', amount: 50000 },
+            { id:1, date:'2024-04-15', category:'Biaya Admin', desc:'Biaya materai', amount: 0000 },
         ],
 
         // documents
         documents: [
-            { name:'Surat Kuasa.pdf', type:'application/pdf', size: 452301, src:'' },
-            { name:'Bukti Transfer.jpg', type:'image/jpeg', size: 120450, src:'' }
+            // { name:'Surat Kuasa.pdf', type:'application/pdf', size: 452301, src:'' },
+            // { name:'Bukti Transfer.jpg', type:'image/jpeg', size: 120450, src:'' }
         ],
         previewDoc: {},
 
         // history & contacts
         history: [
-            { date:'April 23 2023', items:['James Ardy : merekam waktu','Benjamin membuat deposit Rp 2.000.000','James Ardy : update progres','James Ardy : mengubah status'] },
-            { date:'April 22 2023', items:['James Ardy : membuat catatan','Jordan : mengunggah dokumen'] }
+            // { date:'April 23 2023', items:['James Ardy : merekam waktu','Benjamin membuat deposit Rp 2.000.000','James Ardy : update progres','James Ardy : mengubah status'] },
+            // { date:'April 22 2023', items:['James Ardy : membuat catatan','Jordan : mengunggah dokumen'] }
         ],
         contacts: [
-            { name:'James Ardy', phone:'08123456789' },
-            { name:'Gabriella', phone:'085267891234' },
-            { name:'Jordan', phone:'082198765432' },
+            // { name:'James Ardy', phone:'08123456789' },
+            // { name:'Gabriella', phone:'085267891234' },
+            // { name:'Jordan', phone:'082198765432' },
         ],
 
         // tasks & messages & events
         tasks: [
-            { id:1, title:'Siapkan dokumen A', due:'2024-05-01', done:false },
-            { id:2, title:'Kirim invoice termin 1', due:'2024-05-03', done:false }
+            // { id:1, title:'Siapkan dokumen A', due:'2024-05-01', done:false },
+            // { id:2, title:'Kirim invoice termin 1', due:'2024-05-03', done:false }
         ],
         messages: [
-            { id:1, date:'2024-04-20', from:'James', text:'Sudah upload bukti transfer.' }
+            // { id:1, date:'2024-04-20', from:'James', text:'Sudah upload bukti transfer.' }
         ],
         events: [
-            { id:1, date:'2024-05-01', title:'Sidang Pengadilan' }
+            // { id:1, date:'2024-05-01', title:'Sidang Pengadilan' }
         ],
 
         // simple derived values
@@ -563,4 +563,4 @@ function caseDetail(){
     }
 }
 </script>
-</x-utama>
+
