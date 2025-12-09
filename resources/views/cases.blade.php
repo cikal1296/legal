@@ -1,4 +1,5 @@
 {{-- resources/views/cases/show.blade.php --}}
+<x-utama>
 
 <div x-data="caseDetail()" class="p-4 space-y-6">
 
@@ -564,3 +565,5 @@ function caseDetail(){
 }
 </script>
 
+    
+</x-utama>
